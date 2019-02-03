@@ -31,7 +31,7 @@ public class GameManager : MonoBehaviour {
 	private List<Message> msgList = new List<Message>(); //  Messsage queue implementation
 	private bool joinedroom = false;
     public GameObject CameraVR;
-    public USpeaker Speaker;
+  //  public USpeaker Speaker;
     // UI stuff
     private Vector2 scrollPosition;
 	private ArrayList entries = new ArrayList();
@@ -45,7 +45,7 @@ public class GameManager : MonoBehaviour {
     private string userid;
     public float sendtime = 0.15f;
     private float roty;
-    public USpeakJitterTestSender uspeakmain;
+   // public USpeakJitterTestSender uspeakmain;
     void Start() {
 		Application.runInBackground = true;
         CameraVR.SetActive(true);
@@ -154,7 +154,7 @@ public class GameManager : MonoBehaviour {
 
                       GameObject upplayer3 = GameObject.Find(m.GetString(0));
                         // remove the object when it66's picked up56
-                        Speaker.ReceiveAudio(m.GetByteArray(1));
+                    //    Speaker.ReceiveAudio(m.GetByteArray(1));
                         //  upplayer3.transform.rotation = Quaternion.Lerp(upplayer2.transform.rotation, Quaternion.Euler(new Vector3(0, m.GetFloat(1), 0)), smooth2);
                         //     upplayer2.transform.rotation = Quaternion.Euler(new Vector3(0, m.GetFloat(1), 0));
                     
@@ -239,7 +239,7 @@ public class GameManager : MonoBehaviour {
         _make3 = false;
         yield return new WaitForSeconds(sendtime);
         _make3 = true;
-        pioconnection.Send("Speak", uspeakmain.data2);
+      //  pioconnection.Send("Speak", uspeakmain.data2);
    
 
 
