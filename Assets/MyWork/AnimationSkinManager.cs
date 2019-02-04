@@ -49,7 +49,7 @@ public class AnimationSkinManager : MonoBehaviour {
 	private IEnumerator StartMove()
 	{metkaMove = false;
 
-		yield return new WaitForSeconds(0.2f);
+		yield return new WaitForSeconds(0.35f);
 
 		metkaMove = true;
 		animator.SetBool ("Run",false);
