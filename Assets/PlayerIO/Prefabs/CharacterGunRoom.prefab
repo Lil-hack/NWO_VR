@@ -2442,8 +2442,8 @@ MonoBehaviour:
   start: 0
   newRot: {x: 0, y: 0, z: 0}
   roty: 0
-  smooth: 25
-  smooth2: 15
+  smooth: 7
+  smooth2: 10
 --- !u!114 &114191423617226518
 MonoBehaviour:
   m_ObjectHideFlags: 1

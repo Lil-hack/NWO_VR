@@ -85,6 +85,7 @@
      <Compile Include="Assets\MyWork\ManagerGunRoom.cs" />
      <Compile Include="Assets\MyWork\ManagerStartRoom.cs" />
      <Compile Include="Assets\MyWork\ManagerWalkRoom.cs" />
+     <Compile Include="Assets\MyWork\OpenPortal.cs" />
      <Compile Include="Assets\MyWork\Particles\WaterFlow.cs" />
      <Compile Include="Assets\MyWork\PlayerInfo.cs" />
      <Compile Include="Assets\MyWork\PlayerMoveControll.cs" />

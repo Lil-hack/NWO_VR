@@ -54,6 +54,7 @@ public class ManagerGunRoom : MonoBehaviour {
 	public GameObject round;
 	public GameObject winGame;
 	public GameObject loseGame;
+	public WebCam webcam;
 	void Start() {
 		if (botMode == false) {
 			//userid = PlayerPrefs.GetString ("Name");
@@ -472,6 +473,17 @@ public class ManagerGunRoom : MonoBehaviour {
 
 				if (succesConnect) {
 
+					if (webcam.footmetka==true) {
+						target.transform.Translate (Vector3.forward * Time.deltaTime * speed);
+						if (_make2)
+							StartCoroutine (SendPosition ());
+
+					} else {
+						if (_make && roty != target.transform.rotation.eulerAngles.y)
+							StartCoroutine (SendRotate ());
+					}
+
+
 
 					if (Input.GetKey (KeyCode.W)) {
 						target.transform.Translate (Vector3.forward * Time.deltaTime * speed);
@@ -506,6 +518,7 @@ public class ManagerGunRoom : MonoBehaviour {
 		}
 
 	}
+
 
 
 

@@ -5,6 +5,7 @@ using UnityEngine.SceneManagement;
 
 public class PortalWorlds : MonoBehaviour {
 	private ManagerGunRoom manag;
+	public string nameScene;
 	// Use this for initialization
 	void Start () {
 		manag = GameObject.FindGameObjectWithTag ("GameManager").GetComponent<ManagerGunRoom> ();
@@ -34,7 +35,7 @@ public class PortalWorlds : MonoBehaviour {
 
 		yield return new WaitForSeconds(1f);
 		manag.DisconnectAfterCreateRoom ();
-		SceneManager.LoadScene("MainRoom");
+		SceneManager.LoadScene(nameScene);
 
 
 
