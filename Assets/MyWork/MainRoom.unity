@@ -188,7 +188,8 @@ MonoBehaviour:
   - {fileID: 142252, guid: 12121ab2a0550ba42a9e1d956799fb52, type: 2}
   - {fileID: 135428, guid: eea1710edb5bbe447a454fcb7c112cab, type: 2}
   - {fileID: 155690, guid: 985b620247f8ea24bbe8554017e32fb6, type: 2}
-  playerInGame: []
+  playerInGame:
+  - {fileID: 1749651443}
   sendtime: 0.1
   sendtimeForRotate: 0.1
   webcam: {fileID: 85}
@@ -21297,7 +21298,7 @@ Transform:
     type: 2}
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1601407998}
-  m_LocalRotation: {x: -0.7071072, y: -0.000003933906, z: -0.0000030398364, w: 0.70710653}
+  m_LocalRotation: {x: -0.7071071, y: -0.0000039339056, z: -0.000003039836, w: 0.7071065}
   m_LocalPosition: {x: 0, y: 0, z: -0}
   m_LocalScale: {x: 0.56052625, y: 0.56052697, z: 0.5605269}
   m_Children: []

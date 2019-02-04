@@ -5,21 +5,40 @@ using UnityEngine.SceneManagement;
 
 public class PortalWorlds : MonoBehaviour {
 	private ManagerGunRoom manag;
+	private ManagerStartRoom manag2;
 	public string nameScene;
 	// Use this for initialization
 	void Start () {
+		try{
 		manag = GameObject.FindGameObjectWithTag ("GameManager").GetComponent<ManagerGunRoom> ();
+		}
+		catch{
+		}
+		try{
+			manag2 = GameObject.FindGameObjectWithTag ("GameManager").GetComponent<ManagerStartRoom> ();
+		}
+		catch{
+		}
+
 	}
+	
 
 	void OnTriggerEnter (Collider other)
 	{
 
 		Debug.Log (other.gameObject.name);
-
+		if(manag!=null)
 		if (other.gameObject.name == manag.playerInGame[0].name) {
 
 
 		StartCoroutine (Teleport ());
+
+		}
+		if(manag2!=null)
+		if (other.gameObject.name == manag2.playerInGame[0].name) {
+
+
+			StartCoroutine (Teleport2 ());
 
 		}
 	}
@@ -35,6 +54,16 @@ public class PortalWorlds : MonoBehaviour {
 
 		yield return new WaitForSeconds(1f);
 		manag.DisconnectAfterCreateRoom ();
+		SceneManager.LoadScene(nameScene);
+
+
+
+	}
+	private IEnumerator Teleport2()
+	{
+
+		yield return new WaitForSeconds(1f);
+		manag2.DisconnectAfterCreateRoom ();
 		SceneManager.LoadScene(nameScene);
 
 
