@@ -131,6 +131,7 @@ public class ManagerGunRoom : MonoBehaviour {
 									delegate (Connection connection) {
 										Debug.Log("Joined Room.");
 										joinRoom=true;
+										GameObject.FindGameObjectWithTag ("GameManager").GetComponent<WebCam> ().enabled=true;
 										// We successfully joined a room so set up the message handler
 										pioconnection = connection;
 										pioconnection.OnMessage += handlemessage;
@@ -165,6 +166,7 @@ public class ManagerGunRoom : MonoBehaviour {
 								delegate (Connection connection) {
 									Debug.Log("Joined Room.");
 									joinRoom=true;
+									GameObject.FindGameObjectWithTag ("GameManager").GetComponent<WebCam> ().enabled=true;
 									// We successfully joined a room so set up the message handler
 									pioconnection = connection;
 									pioconnection.OnMessage += handlemessage;

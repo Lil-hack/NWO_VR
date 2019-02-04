@@ -25,7 +25,9 @@ public class WebCam : MonoBehaviour
 
 
 	void Start()
-	{if(PlayerPrefs.GetFloat("slider")==0)
+	{
+
+		if(PlayerPrefs.GetFloat("slider")==0)
 		accdelta = 0.5f;
 	else accdelta = PlayerPrefs.GetFloat ("slider");
 
@@ -85,6 +87,10 @@ public class WebCam : MonoBehaviour
 
 
 
+	}
+	public void StopCam()
+	{
+		cam_texture.Stop ();
 	}
 
 	public bool compareColor(Color a, Color b)

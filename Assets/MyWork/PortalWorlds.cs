@@ -6,16 +6,19 @@ using UnityEngine.SceneManagement;
 public class PortalWorlds : MonoBehaviour {
 	private ManagerGunRoom manag;
 	private ManagerStartRoom manag2;
+	private WebCam webcam;
 	public string nameScene;
 	// Use this for initialization
 	void Start () {
 		try{
 		manag = GameObject.FindGameObjectWithTag ("GameManager").GetComponent<ManagerGunRoom> ();
+			webcam=GameObject.FindGameObjectWithTag ("GameManager").GetComponent<WebCam> ();
 		}
 		catch{
 		}
 		try{
 			manag2 = GameObject.FindGameObjectWithTag ("GameManager").GetComponent<ManagerStartRoom> ();
+			webcam=GameObject.FindGameObjectWithTag ("GameManager").GetComponent<WebCam> ();
 		}
 		catch{
 		}
@@ -54,6 +57,7 @@ public class PortalWorlds : MonoBehaviour {
 
 		yield return new WaitForSeconds(1f);
 		manag.DisconnectAfterCreateRoom ();
+		webcam.StopCam ();
 		SceneManager.LoadScene(nameScene);
 
 
@@ -63,6 +67,7 @@ public class PortalWorlds : MonoBehaviour {
 	{
 
 		yield return new WaitForSeconds(1f);
+		webcam.StopCam ();
 		manag2.DisconnectAfterCreateRoom ();
 		SceneManager.LoadScene(nameScene);
 
