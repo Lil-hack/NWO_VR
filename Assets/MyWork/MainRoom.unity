@@ -149,6 +149,7 @@ GameObject:
   m_Component:
   - component: {fileID: 158}
   - component: {fileID: 84}
+  - component: {fileID: 85}
   m_Layer: 0
   m_Name: GameManager
   m_TagString: GameManager
@@ -190,12 +191,27 @@ MonoBehaviour:
   playerInGame: []
   sendtime: 0.1
   sendtimeForRotate: 0.1
+  webcam: {fileID: 85}
   roty: 0
   rotx: 0
   PosRoomEditor: 0
   startPosRoomEditor: 1469
   randomSpawnX: 7
   randomSpawnZ: 7
+--- !u!114 &85
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 83}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 703600c5e07c04246a448bda0353ed8b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  cam_texture: {fileID: 0}
+  accdelta: 0.5
+  footmetka: 0
 --- !u!4 &152
 Transform:
   m_ObjectHideFlags: 0

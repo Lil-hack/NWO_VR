@@ -33,7 +33,7 @@ public class ManagerStartRoom : MonoBehaviour {
 	private string userid;
 	public float sendtime = 0.05f;
 	public float sendtimeForRotate = 0.05f;
-
+	public WebCam webcam;
 	public float roty=0;
 		public float rotx=0;
 	public int PosRoomEditor=109;
@@ -325,6 +325,17 @@ public class ManagerStartRoom : MonoBehaviour {
 			if (joinRoom == true) {
 
 				if (succesConnect) {
+
+					if (webcam.footmetka==true) {
+						target.transform.Translate (Vector3.forward * Time.deltaTime * speed);
+						if (_make2)
+							StartCoroutine (SendPosition ());
+
+					} else {
+						if (_make && roty != target.transform.rotation.eulerAngles.y)
+							StartCoroutine (SendRotate ());
+					}
+
 
 
 					if (Input.GetKey (KeyCode.W)) {

@@ -94,6 +94,7 @@
      <Compile Include="Assets\MyWork\ShootTriger.cs" />
      <Compile Include="Assets\MyWork\ShoterManager.cs" />
      <Compile Include="Assets\MyWork\ToadManager.cs" />
+     <Compile Include="Assets\MyWork\WebCam.cs" />
      <Compile Include="Assets\OneMinuteGui\Scripts\MenuManager.cs" />
      <Compile Include="Assets\PlayerIO\Scripts\AnimationC.cs" />
      <Compile Include="Assets\PlayerIO\Scripts\GameManager.cs" />

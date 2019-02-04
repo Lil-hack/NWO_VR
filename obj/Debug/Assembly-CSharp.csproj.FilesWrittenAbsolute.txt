@@ -18,3 +18,22 @@
 /Users/zikboy/Desktop/Unity3D 1/Temp/bin/Debug/Unity.CecilTools.dll
 /Users/zikboy/Desktop/Unity3D 1/Temp/bin/Debug/Mono.Cecil.Pdb.dll
 /Users/zikboy/Desktop/Unity3D 1/Temp/bin/Debug/Mono.Cecil.Mdb.dll
+/Users/zikboy/Documents/GitHub/NWO_VR/Temp/bin/Debug/UnityEngine.dll
+/Users/zikboy/Documents/GitHub/NWO_VR/Temp/bin/Debug/UnityEditor.dll
+/Users/zikboy/Documents/GitHub/NWO_VR/Temp/bin/Debug/UnityEngine.UI.dll
+/Users/zikboy/Documents/GitHub/NWO_VR/Temp/bin/Debug/UnityEngine.Networking.dll
+/Users/zikboy/Documents/GitHub/NWO_VR/Temp/bin/Debug/UnityEngine.TestRunner.dll
+/Users/zikboy/Documents/GitHub/NWO_VR/Temp/bin/Debug/nunit.framework.dll
+/Users/zikboy/Documents/GitHub/NWO_VR/Temp/bin/Debug/UnityEngine.Analytics.dll
+/Users/zikboy/Documents/GitHub/NWO_VR/Temp/bin/Debug/UnityEngine.HoloLens.dll
+/Users/zikboy/Documents/GitHub/NWO_VR/Temp/bin/Debug/UnityEngine.VR.dll
+/Users/zikboy/Documents/GitHub/NWO_VR/Temp/bin/Debug/PlayerIOUnity3DClient.dll
+/Users/zikboy/Documents/GitHub/NWO_VR/Temp/bin/Debug/Mono.Cecil.dll
+/Users/zikboy/Documents/GitHub/NWO_VR/Temp/bin/Debug/Unity.SerializationLogic.dll
+/Users/zikboy/Documents/GitHub/NWO_VR/Temp/bin/Debug/Unity.DataContract.dll
+/Users/zikboy/Documents/GitHub/NWO_VR/Temp/bin/Debug/ICSharpCode.NRefactory.dll
+/Users/zikboy/Documents/GitHub/NWO_VR/Temp/bin/Debug/Unity.UNetWeaver.dll
+/Users/zikboy/Documents/GitHub/NWO_VR/Temp/bin/Debug/Unity.UNetWeaver.dll.mdb
+/Users/zikboy/Documents/GitHub/NWO_VR/Temp/bin/Debug/Unity.CecilTools.dll
+/Users/zikboy/Documents/GitHub/NWO_VR/Temp/bin/Debug/Mono.Cecil.Pdb.dll
+/Users/zikboy/Documents/GitHub/NWO_VR/Temp/bin/Debug/Mono.Cecil.Mdb.dll
