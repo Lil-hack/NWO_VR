@@ -6,6 +6,7 @@ using UnityEngine.SceneManagement;
 public class PortalWorlds : MonoBehaviour {
 	private ManagerGunRoom manag;
 	private ManagerStartRoom manag2;
+	private ManagerWalkRoom manag3;
 	private WebCam webcam;
 	public string nameScene;
 	// Use this for initialization
@@ -18,6 +19,12 @@ public class PortalWorlds : MonoBehaviour {
 		}
 		try{
 			manag2 = GameObject.FindGameObjectWithTag ("GameManager").GetComponent<ManagerStartRoom> ();
+			webcam=GameObject.FindGameObjectWithTag ("GameManager").GetComponent<WebCam> ();
+		}
+		catch{
+		}
+		try{
+			manag3 = GameObject.FindGameObjectWithTag ("GameManager").GetComponent<ManagerWalkRoom> ();
 			webcam=GameObject.FindGameObjectWithTag ("GameManager").GetComponent<WebCam> ();
 		}
 		catch{
@@ -44,6 +51,13 @@ public class PortalWorlds : MonoBehaviour {
 			StartCoroutine (Teleport2 ());
 
 		}
+		if(manag3!=null)
+		if (other.gameObject.name == manag3.playerInGame[0].name) {
+
+
+			StartCoroutine (Teleport3 ());
+
+		}
 	}
 
 	void OnTriggerExit (Collider other)
@@ -67,8 +81,25 @@ public class PortalWorlds : MonoBehaviour {
 	{
 
 		yield return new WaitForSeconds(1f);
-		webcam.StopCam ();
+		if (webcam.cam_texture != null) {
+			webcam.StopCam ();
+		}
+
 		manag2.DisconnectAfterCreateRoom ();
+		SceneManager.LoadScene(nameScene);
+
+
+
+	}
+	private IEnumerator Teleport3()
+	{
+
+		yield return new WaitForSeconds(1f);
+		if (webcam.cam_texture != null) {
+			webcam.StopCam ();
+		}
+
+		manag3.DisconnectAfterCreateRoom ();
 		SceneManager.LoadScene(nameScene);
 
 

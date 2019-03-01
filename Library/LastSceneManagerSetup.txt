@@ -1,4 +1,4 @@
 sceneSetups:
-- path: Assets/MyWork/MainRoom.unity
+- path: Assets/MyWork/WalkRoomZ.unity
   isLoaded: 1
   isActive: 1

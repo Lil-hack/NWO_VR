@@ -55,6 +55,7 @@ public class ManagerGunRoom : MonoBehaviour {
 	public GameObject winGame;
 	public GameObject loseGame;
 	public WebCam webcam;
+
 	void Start() {
 		if (botMode == false) {
 			//userid = PlayerPrefs.GetString ("Name");

@@ -40,8 +40,8 @@ public class ManagerWalkRoom : MonoBehaviour
 	public float rotx=0;
 	public int PosRoomEditor=109;
 	public int startPosRoomEditor=1469;
-	public float randomSpawnX=5;
-	public float randomSpawnZ=5;
+	public GameObject ZoneStartSpawn;
+	public WebCam webcam;
 
     void Start()
     {
@@ -59,8 +59,11 @@ public class ManagerWalkRoom : MonoBehaviour
 		Application.runInBackground = true;
 
 		// Create a random userid 
-		target.transform.position = new Vector3(Random.Range(-randomSpawnX, randomSpawnX), 0, Random.Range(-randomSpawnZ, randomSpawnZ));
-
+		var rezone = ZoneStartSpawn.transform.localScale;
+		target.transform.position = ZoneStartSpawn.transform.position+new Vector3(Random.Range(-rezone.z/2, rezone.z/2), 
+			Random.Range(-rezone.y/2, rezone.y/2)
+			, Random.Range(-rezone.x/2, rezone.x/2));
+		
 
 		Debug.Log("Starting");
 
@@ -120,6 +123,7 @@ public class ManagerWalkRoom : MonoBehaviour
 									delegate (Connection connection) {
 										Debug.Log("Joined Room.");
 										joinRoom=true;
+										GameObject.FindGameObjectWithTag ("GameManager").GetComponent<WebCam> ().enabled=true;
 										// We successfully joined a room so set up the message handler
 										pioconnection = connection;
 										pioconnection.OnMessage += handlemessage;
@@ -154,6 +158,7 @@ public class ManagerWalkRoom : MonoBehaviour
 								delegate (Connection connection) {
 									Debug.Log("Joined Room.");
 									joinRoom=true;
+									GameObject.FindGameObjectWithTag ("GameManager").GetComponent<WebCam> ().enabled=true;
 									// We successfully joined a room so set up the message handler
 									pioconnection = connection;
 									pioconnection.OnMessage += handlemessage;
@@ -187,6 +192,7 @@ public class ManagerWalkRoom : MonoBehaviour
 							delegate (Connection connection) {
 								Debug.Log("Joined Room.");
 								joinRoom=true;
+								GameObject.FindGameObjectWithTag ("GameManager").GetComponent<WebCam> ().enabled=true;
 								// We successfully joined a room so set up the message handler
 								pioconnection = connection;
 								pioconnection.OnMessage += handlemessage;
@@ -359,6 +365,7 @@ public class ManagerWalkRoom : MonoBehaviour
    
     private void Update()
 	{
+
 		if (botMode == true) {
 			target.transform.Translate (Vector3.forward * Time.deltaTime * speed);
 			if (_make2)
@@ -370,6 +377,17 @@ public class ManagerWalkRoom : MonoBehaviour
 			if (joinRoom == true) {
 
 				if (succesConnect) {
+
+					if (webcam.footmetka==true) {
+						target.transform.Translate (Vector3.forward * Time.deltaTime * speed);
+						if (_make2)
+							StartCoroutine (SendPosition ());
+
+					} else {
+						if (_make && roty != target.transform.rotation.eulerAngles.y)
+							StartCoroutine (SendRotate ());
+					}
+
 
 
 					if (Input.GetKey (KeyCode.W)) {
@@ -395,8 +413,8 @@ public class ManagerWalkRoom : MonoBehaviour
 
 				}
 
-			
-				
+
+
 			} else {
 
 
