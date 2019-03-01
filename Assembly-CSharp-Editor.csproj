@@ -68,7 +68,6 @@
      <None Include="Assets\Water\Scripts\Shaders\LPWFunctions.cginc" />
      <None Include="Assets\Cardboard\Resources\SolidColor.shader" />
      <None Include="Assets\Little Heroes Mega Pack\www.meshtint.com.txt" />
-     <None Include="Assets\Water\Scripts\Shaders\LowPolyWater v2.shader" />
      <None Include="Assets\PlayerIO\Models\naruto.txt" />
  <Reference Include="Assembly-UnityScript">
  <HintPath>/Users/zikboy/Documents/GitHub/NWO_VR/Library/ScriptAssemblies/Assembly-UnityScript.dll</HintPath>
