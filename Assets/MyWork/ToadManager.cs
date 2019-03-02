@@ -7,16 +7,26 @@ public class ToadManager : MonoBehaviour {
 
 public void GiveToad()
     { 
-    StartCoroutine(GiveToadEnum());
-}
-
-
-
-private IEnumerator GiveToadEnum()
-{
-   
-    yield return new WaitForSeconds(2f);
-        GameObject.FindGameObjectWithTag("GameManager").GetComponent<ManagerWalkRoom>().GiveToadServer(this.name);
+		AnimationPixerStart ();
 
 }
+
+	public void AnimationPixerStart()
+	{ 
+		var pix = GameObject.FindGameObjectWithTag ("Player").GetComponent<PixarMineDistansAndAnimation> ();
+		pix.GiveToad(this.name);
+		pix.metka=true;
+	
+
+	}
+
+	public void AnimationPixerStop()
+	{ 
+	GameObject.FindGameObjectWithTag("Player").GetComponent<PixarMineDistansAndAnimation>().metka=false;
+
+
+	}
+
+
+
 }
