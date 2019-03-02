@@ -70,8 +70,11 @@ public class PortalWorlds : MonoBehaviour {
 	{
 
 		yield return new WaitForSeconds(1f);
+		if (webcam.cam_texture != null) {
+			webcam.StopCam ();
+		}
 		manag.DisconnectAfterCreateRoom ();
-		webcam.StopCam ();
+
 		SceneManager.LoadScene(nameScene);
 
 
