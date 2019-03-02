@@ -173,7 +173,7 @@ MonoBehaviour:
   succesConnect: 0
   smooth: 100
   smooth2: 0.9
-  speed: 3
+  speed: 4.3
   skin: 4
   target: {fileID: 1749651443}
   joinRoom: 0

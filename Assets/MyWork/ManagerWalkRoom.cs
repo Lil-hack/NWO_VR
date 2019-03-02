@@ -1,6 +1,7 @@
 ﻿
 
 using UnityEngine;
+using UnityEngine.UI;
 using System.Collections;
 using System.Collections.Generic;
 using PlayerIOClient;
@@ -42,7 +43,7 @@ public class ManagerWalkRoom : MonoBehaviour
 	public int startPosRoomEditor=1469;
 	public GameObject ZoneStartSpawn;
 	public WebCam webcam;
-
+	public Text text;
     void Start()
     {
 		if (botMode == false) {
@@ -335,7 +336,8 @@ public class ManagerWalkRoom : MonoBehaviour
 
                     break;
 
-                case "ToadCount":
+			case "ToadCount":
+				text.text = m.GetInt (0).ToString ();
                     Debug.Log("У тебя сундоков="+m.GetInt(0));
                     break;
            
