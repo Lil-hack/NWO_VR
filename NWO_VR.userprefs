@@ -1,17 +1,23 @@
 ﻿<Properties StartupItem="Assembly-CSharp.csproj">
   <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" PreferredExecutionTarget="Unity.Instance.Unity Editor" />
-  <MonoDevelop.Ide.Workbench ActiveDocument="Assets/MyWork/BotZoneCollision.cs">
+  <MonoDevelop.Ide.Workbench ActiveDocument="Assets/MyWork/ManagerGunRoom.cs">
     <Files>
-      <File FileName="Assets/MyWork/PortalWorlds.cs" Line="63" Column="3" />
+      <File FileName="Assets/MyWork/PortalWorlds.cs" Line="74" Column="22" />
       <File FileName="Assets/MyWork/WebCam.cs" Line="1" Column="1" />
       <File FileName="Assets/PlayerIO/Scripts/GameManager.cs" Line="1" Column="1" />
       <File FileName="Assets/PlayerIO/Scripts/AnimationC.cs" Line="1" Column="1" />
       <File FileName="Assets/MyWork/AnimationSkinManager.cs" Line="1" Column="1" />
-      <File FileName="Assets/MyWork/ManagerStartRoom.cs" Line="1" Column="1" />
+      <File FileName="Assets/MyWork/ManagerStartRoom.cs" Line="36" Column="15" />
       <File FileName="Assets/MyWork/OpenPortal.cs" Line="1" Column="1" />
-      <File FileName="Assets/MyWork/ManagerGunRoom.cs" Line="210" Column="40" />
-      <File FileName="Assets/MyWork/ManagerWalkRoom.cs" Line="198" Column="1" />
+      <File FileName="Assets/MyWork/ManagerGunRoom.cs" Line="261" Column="1" />
+      <File FileName="Assets/MyWork/ManagerWalkRoom.cs" Line="339" Column="21" />
       <File FileName="Assets/MyWork/BotZoneCollision.cs" Line="16" Column="1" />
+      <File FileName="Assets/MyWork/FireballController.cs" Line="1" Column="1" />
+      <File FileName="Assets/MyWork/FireBallDamage.cs" Line="1" Column="1" />
+      <File FileName="Assets/MyWork/ShootTriger.cs" Line="1" Column="1" />
+      <File FileName="Assets/MyWork/ShoterManager.cs" Line="48" Column="2" />
+      <File FileName="Assets/MyWork/ToadManager.cs" Line="17" Column="27" />
+      <File FileName="Assets/MyWork/PixarMineDistansAndAnimation.cs" Line="39" Column="5" />
     </Files>
   </MonoDevelop.Ide.Workbench>
   <MonoDevelop.Ide.DebuggingService.Breakpoints>
