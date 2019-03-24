@@ -17,3 +17,6 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/MyWork/WalkRoomZ.unity
     guid: c309d7f7179aa4476941fccb246e4c10
+  - enabled: 1
+    path: Assets/MyWork/BossRoomZero.unity
+    guid: 00000000000000000000000000000000

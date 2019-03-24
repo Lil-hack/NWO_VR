@@ -8138,7 +8138,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 87b49a18deb7947899e96466e4723841, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  nameScene: 
+  nameScene: BossRoomZero
 --- !u!65 &655642499
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -27275,7 +27275,7 @@ ParticleSystem:
   moveWithTransform: 0
   moveWithCustomTransform: {fileID: 0}
   scalingMode: 2
-  randomSeed: 1904064717
+  randomSeed: -1226816958
   InitialModule:
     serializedVersion: 3
     enabled: 1
