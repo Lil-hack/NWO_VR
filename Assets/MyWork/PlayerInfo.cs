@@ -1,6 +1,7 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 
 public class PlayerInfo : MonoBehaviour {
 
@@ -10,7 +11,7 @@ public class PlayerInfo : MonoBehaviour {
     public float rangeFire = 200;
     public bool fire = false;
 	public GameObject blood;
-
+	public Slider slid; 
 	public void BloodUp()
 	{
 		blood.SetActive (true);
@@ -26,5 +27,14 @@ public class PlayerInfo : MonoBehaviour {
 		blood.SetActive (false);
 
 		//ShootBall ();
+	}
+
+	public void GetDamage(int hpFrom)
+	{
+		hp = hpFrom;
+		slid.value = hp;
+
+		
+
 	}
 }

@@ -8,6 +8,7 @@ public class BossManager : MonoBehaviour {
 	public bool metkaMove;
 	public float speed=5;
 	public Animator anim;
+	public GameObject damageCloud;
 	// Use this for initialization
 	void Start () {
 		
@@ -20,16 +21,18 @@ public class BossManager : MonoBehaviour {
 
 			this.gameObject.transform.position =  Vector3.Lerp (this.gameObject.transform.position,pos,speed*Time.deltaTime);
 
-			if (Mathf.Abs(this.gameObject.transform.position.x-pos.x) <1) {
+			if (Mathf.Abs(this.gameObject.transform.position.x-pos.x) <1 && Mathf.Abs(this.gameObject.transform.position.z-pos.z) <1 ) {
 				metkaMove = false;
 				anim.SetBool ("walk", false);
 				anim.SetTrigger ("agr");
+				damageCloud.SetActive (false);
 			}
 		}
 	}
 
 	public void Move(float x,float z)
 	{ metkaMove = true;
+		damageCloud.SetActive (true);
 		anim.SetBool ("walk", true);
 		pos = new Vector3 (x,
 			this.gameObject.transform.position.y,

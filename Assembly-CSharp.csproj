@@ -83,6 +83,7 @@
      <Compile Include="Assets\MyWork\FindRoomButton.cs" />
      <Compile Include="Assets\MyWork\FireBallDamage.cs" />
      <Compile Include="Assets\MyWork\FireballController.cs" />
+     <Compile Include="Assets\MyWork\GetDamageBossManager.cs" />
      <Compile Include="Assets\MyWork\HeroStartRotate.cs" />
      <Compile Include="Assets\MyWork\Heroes.cs" />
      <Compile Include="Assets\MyWork\HeroesChoese.cs" />
@@ -103,6 +104,7 @@
      <Compile Include="Assets\MyWork\ShootTrigerBoss.cs" />
      <Compile Include="Assets\MyWork\ShoterManager.cs" />
      <Compile Include="Assets\MyWork\ShoterManagerBoss.cs" />
+     <Compile Include="Assets\MyWork\StartBoss.cs" />
      <Compile Include="Assets\MyWork\ToadManager.cs" />
      <Compile Include="Assets\MyWork\WebCam.cs" />
      <Compile Include="Assets\OneMinuteGui\Scripts\MenuManager.cs" />

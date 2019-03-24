@@ -340,6 +340,35 @@ public class ManaggerBossRoom : MonoBehaviour {
 
 
 				break;
+			case "Start":
+
+
+
+
+	
+
+				//pl2.BloodUp ();
+				//pl.GetComponent<AnimationSkinManager> ().DamageAnimation();
+
+				Debug.Log ("StartBoss");
+
+
+
+				break;
+			case "GetDamage":
+
+
+
+
+				if (playerInGame.Find (obj => obj.name == m.GetString(0))!=null)
+				{
+					playerInGame.Find (obj => obj.name == m.GetString (0)).GetComponent<PlayerInfo> ().GetDamage (m.GetInt (1));
+
+				}
+
+
+
+				break;
 			case "FireBall":
 
 				Vector3 posBall = new Vector3 (m.GetFloat (0), m.GetFloat (1), m.GetFloat (2));
@@ -420,6 +449,13 @@ public class ManaggerBossRoom : MonoBehaviour {
 
 		//	gunControl.GunFire ();
 	}
+
+	public void  StartGame()
+	{
+
+		pioconnection.Send ("Start");
+
+	}
 	public void Damage(string playerWhoDamage)
 	{
 		
@@ -429,6 +465,18 @@ public class ManaggerBossRoom : MonoBehaviour {
 
 
 	
+
+
+	}
+	public void GetDamage()
+	{
+
+
+
+		pioconnection.Send ("GetDamage");
+
+
+
 
 
 	}
