@@ -77,6 +77,27 @@ public class AnimationSkinManager : MonoBehaviour {
 
 
 	}
+
+	public void AttackAnimation()
+	{ 
+		if(skin != null)
+		{
+			if ( animator!=null) {
+				animator.SetTrigger ("Right Throw");
+
+
+
+
+			}
+			else{
+				animator=skin.GetComponent<Animator>();
+			}
+		}
+
+
+
+	}
+
 	public void DamageAnimation()
 	{ 
 		if(skin != null)

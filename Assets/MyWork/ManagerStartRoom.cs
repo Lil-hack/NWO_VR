@@ -116,7 +116,7 @@ public class ManagerStartRoom : MonoBehaviour {
 										// We successfully joined a room so set up the message handler
 										pioconnection = connection;
 										pioconnection.OnMessage += handlemessage;
-
+										GameObject.FindGameObjectWithTag ("GameManager").GetComponent<WebCam> ().enabled=true;
 									//	pioconnection.Send("Skin", roty);
 										joinedroom = true;
 									},

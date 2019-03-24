@@ -204,7 +204,7 @@ public class ManagerGunRoom : MonoBehaviour {
 								// We successfully joined a room so set up the message handler
 								pioconnection = connection;
 								pioconnection.OnMessage += handlemessage;
-
+								GameObject.FindGameObjectWithTag ("GameManager").GetComponent<WebCam> ().enabled=true;
 
 								joinedroom = true;
 							},
@@ -340,10 +340,18 @@ public class ManagerGunRoom : MonoBehaviour {
 				break;
 			case "FireBall":
 				
-				Vector3 posBall = new Vector3 (m.GetFloat (0),m.GetFloat (1),m.GetFloat (2));
-
-				var rotate=Quaternion.Euler (new Vector3 (m.GetFloat (3),m.GetFloat (4),m.GetFloat (5)));
-				 Instantiate (fireball, posBall, rotate);
+				Vector3 posBall = new Vector3 (m.GetFloat (0), m.GetFloat (1), m.GetFloat (2));
+				if (m.GetString (6) == target.name) {
+					var rotate = Quaternion.Euler (new Vector3 (m.GetFloat (3), m.GetFloat (4), m.GetFloat (5)));
+					Instantiate (fireball, posBall, rotate);
+				} else {
+				
+					if (playerInGame.Find (obj => obj.name == m.GetString(6))!=null)
+					{
+						playerInGame.Find (obj => obj.name == m.GetString (6)).GetComponent<AnimationSkinManager>
+						().AttackAnimation ();
+					}
+				}
 
 
 

@@ -58,7 +58,9 @@
      <None Include="Assets\Cardboard\Distortion\CardboardDistortion.cginc" />
      <None Include="Assets\Cardboard\Resources\UnlitTexture.shader" />
      <None Include="Assets\OneMinuteGui\Font\CarterOne\OFL.txt" />
+     <None Include="Assets\Fantasy Monster(wizard) Demo\READ ME(wizard)\character setup guide link.txt" />
      <None Include="Assets\Plugins\Android\AndroidManifest.xml" />
+     <None Include="Assets\RainEntertainment\FantasyMonster4\Diamond Lord\readMe.txt" />
      <None Include="Assets\Little Heroes Mega Pack\Read me.txt" />
      <None Include="Assets\Cardboard\Resources\UI\CardboardReticleShader.shader" />
      <None Include="Assets\Cardboard\Resources\SolidColor.shader" />

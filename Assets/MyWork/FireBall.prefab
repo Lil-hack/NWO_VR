@@ -20,16 +20,14 @@ GameObject:
   m_Component:
   - component: {fileID: 4426493071503318}
   - component: {fileID: 33508776532388224}
-  - component: {fileID: 135479320361351608}
   - component: {fileID: 23568061131609932}
-  - component: {fileID: 54843082151643466}
   m_Layer: 0
   m_Name: Sphere
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!1 &1459328547051034
 GameObject:
   m_ObjectHideFlags: 0
@@ -44,7 +42,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!1 &1508393060787028
 GameObject:
   m_ObjectHideFlags: 0
@@ -54,6 +52,8 @@ GameObject:
   m_Component:
   - component: {fileID: 4516492128456406}
   - component: {fileID: 114455349616253374}
+  - component: {fileID: 135054800331953152}
+  - component: {fileID: 54817448833141668}
   m_Layer: 0
   m_Name: FireBall
   m_TagString: Untagged
@@ -236,12 +236,12 @@ MeshFilter:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1254220657583458}
   m_Mesh: {fileID: 10207, guid: 0000000000000000e000000000000000, type: 0}
---- !u!54 &54843082151643466
+--- !u!54 &54817448833141668
 Rigidbody:
   m_ObjectHideFlags: 1
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 1254220657583458}
+  m_GameObject: {fileID: 1508393060787028}
   serializedVersion: 2
   m_Mass: 0.0000001
   m_Drag: 0
@@ -262,19 +262,19 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f7cccf83c89614dbda0c6760e8490aa9, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  speed: 30
-  lifeTime: 5
-  colliderTime: 0.02
-  sphere: {fileID: 135479320361351608}
---- !u!135 &135479320361351608
+  speed: 5
+  lifeTime: 0.25
+  colliderTime: 0.0001
+  sphere: {fileID: 135054800331953152}
+--- !u!135 &135054800331953152
 SphereCollider:
   m_ObjectHideFlags: 1
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 1254220657583458}
+  m_GameObject: {fileID: 1508393060787028}
   m_Material: {fileID: 0}
   m_IsTrigger: 1
-  m_Enabled: 0
+  m_Enabled: 1
   serializedVersion: 2
   m_Radius: 1.34
   m_Center: {x: 0, y: 0, z: 0}
@@ -311,7 +311,7 @@ ParticleSystem:
   moveWithTransform: 0
   moveWithCustomTransform: {fileID: 0}
   scalingMode: 2
-  randomSeed: -1932754427
+  randomSeed: -428190628
   InitialModule:
     serializedVersion: 3
     enabled: 1

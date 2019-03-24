@@ -5,7 +5,7 @@ using UnityEngine;
 public class FireBallDamage : MonoBehaviour {
 
 	public ManagerGunRoom manager;
-	public float timecolliderstart=0.2f;
+
 	// Use this for initialization
 	void Start () {
 		manager=GameObject.FindGameObjectWithTag ("GameManager").GetComponent<ManagerGunRoom> ();
@@ -24,20 +24,13 @@ public class FireBallDamage : MonoBehaviour {
 	{
 		//if(collision.gameObject.name=="Sphere")
 
-		//Debug.Log ("tigeer"+collision.gameObject.name);
-		if (collision.gameObject.name == "Sphere") {
+		Debug.Log ("tigeer"+collision.gameObject.name);
+		if (collision.gameObject.name == "FireBall(Clone)") {
 			Debug.Log ("tigeer"+collision.gameObject.name);
 			manager.Damage (this.gameObject.name);
 		}	//manager.Damage(collision.gameObject.name);
 	}
 
-	private IEnumerator SphereColliderStart()
-	{
 
-		yield return new WaitForSeconds(timecolliderstart);
-		this.gameObject.GetComponent<SphereCollider> ().enabled = true;
-
-
-	}
 
 }
