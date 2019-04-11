@@ -1,4 +1,4 @@
 sceneSetups:
-- path: Assets/MyWork/GunRoomZero.unity
+- path: Assets/MyWork/BossRoomZero.unity
   isLoaded: 1
   isActive: 1
