@@ -137,7 +137,7 @@ PlayerSettings:
   protectGraphicsMemory: 0
   useHDRDisplay: 0
   applicationIdentifier:
-    Android: com.Company.ProductName
+    Android: com.ZikCompony.Nwo
     Standalone: unity.DefaultCompany.Unity3D
     Tizen: com.Company.ProductName
     iOS: com.Company.ProductName
