@@ -3,13 +3,16 @@ using UnityEngine;
 using UnityEngine.UI;
 using UnityEngine.SceneManagement;
 using System.Collections;
+using UnityEngine.Networking;
+
 public class MenuManager : MonoBehaviour 
 {
 
 	public InputField name;
 	public InputField password;
 	public GameObject StartMenu;
-
+	public GameObject ErrorMenu;
+	public Text ErrorText;
 
 	[SerializeField]
 	private string m_animationPropertyName;
@@ -111,8 +114,7 @@ public class MenuManager : MonoBehaviour
 		} else {
 
 			Debug.Log ("all ok");
-			PlayerPrefs.SetString("Name",name.text);
-			PlayerPrefs.SetString("Password",password.text);
+
 			GoToMenu (StartMenu);
 		}
 	}

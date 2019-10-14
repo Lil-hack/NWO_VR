@@ -1,0 +1,21 @@
+fileFormatVersion: 2
+guid: 9dc238f3a791240bea8a35a696f9b56f
+timeCreated: 1571090829
+licenseType: Pro
+TrueTypeFontImporter:
+  serializedVersion: 4
+  fontSize: 16
+  forceTextureCase: -2
+  characterSpacing: 0
+  characterPadding: 1
+  includeFontData: 1
+  fontName: Carter One MultiCyr
+  fontNames:
+  - Carter One MultiCyr
+  fallbackFontReferences: []
+  customCharacters: 
+  fontRenderingMode: 0
+  ascentCalculationMode: 1
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
