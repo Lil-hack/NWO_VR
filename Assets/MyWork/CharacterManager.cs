@@ -23,7 +23,7 @@ public class CharacterManager : MonoBehaviour {
 
 	void OnEnable()
 	{
-		nameCharacter.text = PlayerPrefs.GetString ("Name");
+		nameCharacter.text = PlayerPrefs.GetString ("username");
 		characterType = PlayerPrefs.GetInt ("Skin");
 
 		hero=Instantiate(	heroes.GetComponent<Heroes>().heroes[characterType],trans);

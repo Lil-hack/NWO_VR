@@ -11,6 +11,8 @@ public class MenuManager : MonoBehaviour
 	public InputField name;
 	public InputField password;
 	public GameObject StartMenu;
+	public GameObject LoginMenu;
+	public GameObject RegMenu;
 	public GameObject ErrorMenu;
 	public Text ErrorText;
 
@@ -37,11 +39,11 @@ public class MenuManager : MonoBehaviour
 	}
 	 void Start()
 	{
-		if (PlayerPrefs.GetString ("Name").CompareTo ("")==0) {
-			Debug.Log (PlayerPrefs.GetString ("Name"));
+		if (PlayerPrefs.GetString ("uuid").CompareTo ("")==0) {
+			Debug.Log (PlayerPrefs.GetString ("uuid"));
 		} else {
 			GoToMenu (StartMenu);
-			Debug.Log (PlayerPrefs.GetString ("Name")+"er");
+			Debug.Log (PlayerPrefs.GetString ("uuid"));
 		};
 	}
 
@@ -121,7 +123,22 @@ public class MenuManager : MonoBehaviour
 
     public void LogOut()
     {
-        PlayerPrefs.SetString("Name", null);
-        PlayerPrefs.SetString("Password", null);
+		PlayerPrefs.SetString ("uuid", null);
+		PlayerPrefs.SetString ("username",null);
+		PlayerPrefs.SetString ("first_name", null);
+		PlayerPrefs.SetString ("last_name", null);
+		PlayerPrefs.SetString ("email", null);
     }
+	public void ErrorClose()
+	{
+		ErrorMenu.SetActive (false);
+	}
+	public void RegClose()
+	{
+		RegMenu.SetActive (false);
+	}
+	public void LoginClose()
+	{
+		LoginMenu.SetActive (false);
+	}
 }
