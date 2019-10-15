@@ -194,7 +194,7 @@ MonoBehaviour:
   m_LineType: 0
   m_HideMobileInput: 0
   m_CharacterValidation: 5
-  m_CharacterLimit: 0
+  m_CharacterLimit: 20
   m_OnEndEdit:
     m_PersistentCalls:
       m_Calls: []
@@ -2109,7 +2109,7 @@ GameObject:
   - component: {fileID: 171571616}
   - component: {fileID: 171571615}
   m_Layer: 5
-  m_Name: Twitter (4)
+  m_Name: LogOut
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -4485,7 +4485,6 @@ GameObject:
   serializedVersion: 5
   m_Component:
   - component: {fileID: 360255221}
-  - component: {fileID: 360255222}
   m_Layer: 5
   m_Name: Hero
   m_TagString: Untagged
@@ -4506,23 +4505,6 @@ Transform:
   m_Father: {fileID: 1260145265}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 179.12502, z: 0}
---- !u!114 &360255222
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 360255220}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 1e88bd38e03194519a383c2df081f54d, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  nameCharacter: {fileID: 2121491861}
-  characterType: 0
-  heroes: {fileID: 1527029784778720, guid: 0c9cd118e10d2460a9a76189591ff902, type: 2}
-  trans: {fileID: 360255221}
-  hero: {fileID: 0}
-  layerType: 5
 --- !u!1 &360742864
 GameObject:
   m_ObjectHideFlags: 0
@@ -6189,7 +6171,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &474703524
 RectTransform:
   m_ObjectHideFlags: 0
@@ -10299,7 +10281,7 @@ MonoBehaviour:
   m_LineType: 0
   m_HideMobileInput: 0
   m_CharacterValidation: 0
-  m_CharacterLimit: 0
+  m_CharacterLimit: 10
   m_OnEndEdit:
     m_PersistentCalls:
       m_Calls: []
@@ -12789,7 +12771,7 @@ MonoBehaviour:
   m_LineType: 0
   m_HideMobileInput: 0
   m_CharacterValidation: 0
-  m_CharacterLimit: 0
+  m_CharacterLimit: 10
   m_OnEndEdit:
     m_PersistentCalls:
       m_Calls: []
@@ -12856,7 +12838,7 @@ GameObject:
   - component: {fileID: 878232994}
   - component: {fileID: 878232993}
   m_Layer: 5
-  m_Name: Twitter (3)
+  m_Name: Info
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -15509,7 +15491,7 @@ MonoBehaviour:
   m_LineType: 0
   m_HideMobileInput: 0
   m_CharacterValidation: 0
-  m_CharacterLimit: 0
+  m_CharacterLimit: 20
   m_OnEndEdit:
     m_PersistentCalls:
       m_Calls: []
@@ -18802,6 +18784,7 @@ GameObject:
   - component: {fileID: 1260145261}
   - component: {fileID: 1260145260}
   - component: {fileID: 1260145259}
+  - component: {fileID: 1260145266}
   m_Layer: 5
   m_Name: MainMenu
   m_TagString: Untagged
@@ -18948,6 +18931,31 @@ RectTransform:
   m_AnchoredPosition: {x: 0, y: 0}
   m_SizeDelta: {x: 1024, y: 768}
   m_Pivot: {x: 0.5, y: 0.5}
+--- !u!114 &1260145266
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1260145258}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1e88bd38e03194519a383c2df081f54d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  nameCharacter: {fileID: 2121491861}
+  characterType: 0
+  heroes: {fileID: 1527029784778720, guid: 0c9cd118e10d2460a9a76189591ff902, type: 2}
+  trans: {fileID: 360255221}
+  hero: {fileID: 0}
+  layerType: 5
+  uuid: 
+  username: 
+  first_name: 
+  email: 
+  lvl: 0
+  money: 0
+  crystal: 0
+  skin: 0
 --- !u!1 &1266430742
 GameObject:
   m_ObjectHideFlags: 0
@@ -20836,7 +20844,7 @@ AudioSource:
       tangentMode: 0
     m_PreInfinity: 2
     m_PostInfinity: 2
-    m_RotationOrder: 4
+    m_RotationOrder: 0
   spreadCustomCurve:
     serializedVersion: 2
     m_Curve:
@@ -20848,7 +20856,7 @@ AudioSource:
       tangentMode: 0
     m_PreInfinity: 2
     m_PostInfinity: 2
-    m_RotationOrder: 4
+    m_RotationOrder: 0
   reverbZoneMixCustomCurve:
     serializedVersion: 2
     m_Curve:
@@ -20860,7 +20868,7 @@ AudioSource:
       tangentMode: 0
     m_PreInfinity: 2
     m_PostInfinity: 2
-    m_RotationOrder: 4
+    m_RotationOrder: 0
 --- !u!95 &1414069735
 Animator:
   serializedVersion: 3
@@ -29470,7 +29478,7 @@ GameObject:
   - component: {fileID: 1923572738}
   - component: {fileID: 1923572737}
   m_Layer: 5
-  m_Name: Twitter
+  m_Name: Setting
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -29709,7 +29717,7 @@ GameObject:
   - component: {fileID: 1936236720}
   - component: {fileID: 1936236719}
   m_Layer: 5
-  m_Name: Twitter (2)
+  m_Name: Shop
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -30168,7 +30176,7 @@ MonoBehaviour:
   m_LineType: 0
   m_HideMobileInput: 0
   m_CharacterValidation: 0
-  m_CharacterLimit: 0
+  m_CharacterLimit: 20
   m_OnEndEdit:
     m_PersistentCalls:
       m_Calls: []
@@ -31086,7 +31094,7 @@ MonoBehaviour:
   m_LineType: 0
   m_HideMobileInput: 0
   m_CharacterValidation: 0
-  m_CharacterLimit: 0
+  m_CharacterLimit: 20
   m_OnEndEdit:
     m_PersistentCalls:
       m_Calls: []
@@ -32944,7 +32952,7 @@ MonoBehaviour:
     m_TypeName: UnityEngine.UI.MaskableGraphic+CullStateChangedEvent, UnityEngine.UI,
       Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
   m_FontData:
-    m_Font: {fileID: 12800000, guid: 1e90e816450a139488dfc8fe0240dea7, type: 3}
+    m_Font: {fileID: 12800000, guid: 9dc238f3a791240bea8a35a696f9b56f, type: 3}
     m_FontSize: 37
     m_FontStyle: 0
     m_BestFit: 0
@@ -33092,7 +33100,7 @@ MonoBehaviour:
     m_TypeName: UnityEngine.UI.MaskableGraphic+CullStateChangedEvent, UnityEngine.UI,
       Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
   m_FontData:
-    m_Font: {fileID: 12800000, guid: 1e90e816450a139488dfc8fe0240dea7, type: 3}
+    m_Font: {fileID: 12800000, guid: 9dc238f3a791240bea8a35a696f9b56f, type: 3}
     m_FontSize: 40
     m_FontStyle: 0
     m_BestFit: 0
@@ -33104,7 +33112,8 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 0.72
-  m_Text: Do you want to quit account?
+  m_Text: "\u0422\u043E\u0447\u043D\u043E \u0445\u043E\u0442\u0438\u0442\u0435 \u0432\u044B\u0439\u0442\u0438
+    \u0441 \u0430\u043A\u043A\u0430\u0443\u043D\u0442\u0430?"
 --- !u!222 &2138168023
 CanvasRenderer:
   m_ObjectHideFlags: 0

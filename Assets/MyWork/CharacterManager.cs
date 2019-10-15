@@ -10,6 +10,17 @@ public class CharacterManager : MonoBehaviour {
 	public Transform trans;
 	public GameObject hero;
 	public int layerType;
+	// данные пользователя
+
+	public string uuid;
+	public string username;
+	public string first_name;
+	public string email;
+	public float lvl;
+	public int money;
+	public int crystal;
+	public int skin;
+
 	// Use this for initialization
 	void Start () {
 		
@@ -23,6 +34,20 @@ public class CharacterManager : MonoBehaviour {
 
 	void OnEnable()
 	{
+		// данные пользователя
+
+		uuid=PlayerPrefs.GetString ("uuid");
+		username=PlayerPrefs.GetString ("username");
+		first_name=PlayerPrefs.GetString ("first_name");
+		email=PlayerPrefs.GetString ("email");
+
+		lvl=PlayerPrefs.GetFloat ("lvl");
+		money=PlayerPrefs.GetInt ("money");
+		crystal=PlayerPrefs.GetInt ("crystal");
+		skin=PlayerPrefs.GetInt ("skin");
+
+		// данные пользователя
+
 		nameCharacter.text = PlayerPrefs.GetString ("username");
 		characterType = PlayerPrefs.GetInt ("Skin");
 

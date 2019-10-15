@@ -128,6 +128,7 @@ public class MenuManager : MonoBehaviour
 		PlayerPrefs.SetString ("first_name", null);
 		PlayerPrefs.SetString ("last_name", null);
 		PlayerPrefs.SetString ("email", null);
+		StartMenu.SetActive(false);
     }
 	public void ErrorClose()
 	{
