@@ -43,17 +43,18 @@ public class Login : MonoBehaviour {
 			menu.ErrorText.text = "Нет соединения!";
 		} else {
 			string json_user = www.downloadHandler.text;
-			if (json_user.Equals ("401")) {
+			long code = www.responseCode;
+			if (code==401) {
 				menu.GoToMenu (menu.ErrorMenu);
 				menu.ErrorText.text = "Неправильный логин или пароль!";
 
 			}
-			if (json_user.Equals ("404")) {
+			if (code==404) {
 				menu.GoToMenu (menu.ErrorMenu);
 				menu.ErrorText.text = "С таким логином нет пользователя!";
 
 			} 
-			if(!json_user.Equals ("401") && !json_user.Equals ("404"))
+			if(code!=401 && code!=404)
 			{
 				Debug.Log (json_user);
 				User me = JsonUtility.FromJson<User> (json_user);

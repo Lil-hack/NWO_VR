@@ -1,6 +1,8 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 11.00
 # Visual Studio 2010
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "NWO_VR", "Assembly-CSharp-firstpass.csproj", "{F3B34DF8-559B-8794-AFC8-7253F2ED8C15}"
+EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "NWO_VR", "Assembly-CSharp.csproj", "{1AC254C9-C7C1-50E0-07B3-F33E1DDBDB2F}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "NWO_VR", "Assembly-CSharp-Editor.csproj", "{1364EDDE-49FF-1E00-A7E0-D5023B46C956}"
@@ -11,6 +13,10 @@ Global
 		Release|Any CPU = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{F3B34DF8-559B-8794-AFC8-7253F2ED8C15}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{F3B34DF8-559B-8794-AFC8-7253F2ED8C15}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{F3B34DF8-559B-8794-AFC8-7253F2ED8C15}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{F3B34DF8-559B-8794-AFC8-7253F2ED8C15}.Release|Any CPU.Build.0 = Release|Any CPU
 		{1AC254C9-C7C1-50E0-07B3-F33E1DDBDB2F}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
 		{1AC254C9-C7C1-50E0-07B3-F33E1DDBDB2F}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{1AC254C9-C7C1-50E0-07B3-F33E1DDBDB2F}.Release|Any CPU.ActiveCfg = Release|Any CPU
