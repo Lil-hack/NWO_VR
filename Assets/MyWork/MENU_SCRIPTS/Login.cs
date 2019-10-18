@@ -9,6 +9,8 @@ public class Login : MonoBehaviour {
 	public string URL_API_USERS="https://api-user-game.herokuapp.com//users/";
 	public InputField name;
 	public InputField password;
+
+	public GetStats getStat;
 	// Use this for initialization
 	[System.Serializable]
 	public class User
@@ -20,10 +22,11 @@ public class Login : MonoBehaviour {
 		public string email;
 		public string password;
 	}
+
+
 	void Start () {
-		
+		getStat=GameObject.FindGameObjectWithTag ("MenuManager").GetComponent<GetStats> ();
 	}
-	
 
 	public void LoginBut()
 	{
@@ -44,18 +47,19 @@ public class Login : MonoBehaviour {
 		} else {
 			string json_user = www.downloadHandler.text;
 			long code = www.responseCode;
-			if (code==401) {
+			if (code==401 || json_user.Equals("401")) {
+				Debug.Log (www.error);
 				menu.GoToMenu (menu.ErrorMenu);
 				menu.ErrorText.text = "Неправильный логин или пароль!";
 
 			}
-			if (code==404) {
+			if (code==404 || json_user.Equals("404")) {
 				menu.GoToMenu (menu.ErrorMenu);
 				menu.ErrorText.text = "С таким логином нет пользователя!";
 
 			} 
-			if(code!=401 && code!=404)
-			{
+			if(code==201 || code==200 && !json_user.Equals("404") && !json_user.Equals("401"))
+			{Debug.Log (code);
 				Debug.Log (json_user);
 				User me = JsonUtility.FromJson<User> (json_user);
 
@@ -64,7 +68,10 @@ public class Login : MonoBehaviour {
 				PlayerPrefs.SetString ("first_name", me.first_name);
 				PlayerPrefs.SetString ("last_name", me.last_name);
 				PlayerPrefs.SetString ("email", me.email);
+				getStat.GetData ();
+
 				menu.GoToMenu (menu.StartMenu);
+				menu.LoginClose ();
 			}
 				
 		

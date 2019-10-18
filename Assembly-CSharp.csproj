@@ -87,7 +87,10 @@
      <Compile Include="Assets\MyWork\HeroStartRotate.cs" />
      <Compile Include="Assets\MyWork\Heroes.cs" />
      <Compile Include="Assets\MyWork\HeroesChoese.cs" />
-     <Compile Include="Assets\MyWork\MENU_SCRIPTS\Change.cs" />
+     <Compile Include="Assets\MyWork\MENU_SCRIPTS\ChangeBut.cs" />
+     <Compile Include="Assets\MyWork\MENU_SCRIPTS\ChangeManager.cs" />
+     <Compile Include="Assets\MyWork\MENU_SCRIPTS\GetStats.cs" />
+     <Compile Include="Assets\MyWork\MENU_SCRIPTS\HerouesShop.cs" />
      <Compile Include="Assets\MyWork\MENU_SCRIPTS\Login.cs" />
      <Compile Include="Assets\MyWork\MENU_SCRIPTS\Registr.cs" />
      <Compile Include="Assets\MyWork\ManagerGunRoom.cs" />
@@ -160,6 +163,15 @@
      <Compile Include="Assets\ShipGameStarterKit\Scripts\Strategy\TradeRoute.cs" />
      <Compile Include="Assets\ShipGameStarterKit\Scripts\Strategy\TradeRouteCreator.cs" />
      <Compile Include="Assets\ShipGameStarterKit\Scripts\Strategy\TradeShip.cs" />
+     <Compile Include="Assets\StylizedWater\Scripts\EnableDepthBuffer.cs" />
+     <Compile Include="Assets\StylizedWater\Scripts\StylizedWater.cs" />
+     <Compile Include="Assets\StylizedWater\Scripts\StylizedWaterBlur.cs" />
+     <Compile Include="Assets\StylizedWater\Scripts\StylizedWaterRenderer.cs" />
+     <Compile Include="Assets\StylizedWater\Scripts\StylizedWaterResources.cs" />
+     <Compile Include="Assets\StylizedWater\Scripts\StylizedWaterShadowCaster.cs" />
+     <Compile Include="Assets\StylizedWater\Scripts\StylizedWaterUtilities.cs" />
+     <Compile Include="Assets\StylizedWater\_Demo\OrbitCamera.cs" />
+     <None Include="Assets\unity3d.txt" />
      <None Include="Assets\Standard Assets\Effects\GlassRefraction\Shaders\GlassStainedBumpDistort.shader" />
      <None Include="Assets\Standard Assets\Effects\ImageEffects\Shaders\_BloomAndFlares\BlendOneOne.shader" />
      <None Include="Assets\Standard Assets\Effects\ImageEffects\Shaders\NoiseEffectShaderRGB.shader" />
@@ -180,6 +192,7 @@
      <None Include="Assets\Standard Assets\Effects\ImageEffects\Shaders\_DepthOfField\DepthOfFieldScatter.shader" />
      <None Include="Assets\Standard Assets\Effects\TessellationShaders\Shaders\BumpedSpecularSmooth.shader" />
      <None Include="Assets\Standard Assets\Effects\Projectors\Guidelines.txt" />
+     <None Include="Assets\StylizedWater\Scripts\Editor\SWS_ShaderMapRenderer.shader" />
      <None Include="Assets\Cardboard\Resources\UnlitTexture.shader" />
      <None Include="Assets\Standard Assets\Effects\ImageEffects\Shaders\MotionBlur.shader" />
      <None Include="Assets\Standard Assets\Effects\ImageEffects\Shaders\_BloomAndFlares\MobileBloom.shader" />
@@ -193,8 +206,12 @@
      <None Include="Assets\Standard Assets\Effects\ImageEffects\Shaders\_Antialiasing\FXAAPreset3.shader" />
      <None Include="Assets\Standard Assets\Effects\ImageEffects\Shaders\FisheyeShader.shader" />
      <None Include="Assets\Standard Assets\Effects\ImageEffects\Scripts\Post Effect Mask\Readme.txt" />
+     <None Include="Assets\StylizedWater\Changelog.txt" />
      <None Include="Assets\Standard Assets\Effects\ImageEffects\Shaders\Contrast Stretch\Apply.shader" />
      <None Include="Assets\Standard Assets\Effects\ImageEffects\Shaders\frag_ao.cginc" />
+     <None Include="Assets\StylizedWater\Effects\Shaders\StylizedWater_Particle_Mobile.shader" />
+     <None Include="Assets\StylizedWater\Scripts\Textures\Normals\Readme.txt" />
+     <None Include="Assets\StylizedWater\Scripts\Resources\StylizedWaterReflectionBlur.shader" />
      <None Include="Assets\ShipGameStarterKit\Shaders\Tree.shader" />
      <None Include="Assets\ShipGameStarterKit\Shaders\ReplaceColor.shader" />
      <None Include="Assets\Standard Assets\Effects\ToonShading\Shaders\ToonBasicOutline.shader" />
@@ -207,7 +224,9 @@
      <None Include="Assets\Standard Assets\Effects\ImageEffects\Shaders\ColorCorrectionCurvesSimple.shader" />
      <None Include="Assets\Standard Assets\Effects\ImageEffects\Shaders\NoiseEffectShaderYUV.shader" />
      <None Include="Assets\ShipGameStarterKit\Shaders\Water.shader" />
+     <None Include="Assets\StylizedWater\Shaders\StylizedWater_Desktop.shader" />
      <None Include="Assets\Standard Assets\Effects\ImageEffects\Shaders\CreaseApply.shader" />
+     <None Include="Assets\StylizedWater\Shaders\StylizedWater_Mobile.shader" />
      <None Include="Assets\Standard Assets\Effects\ImageEffects\Shaders\ChromaticAberrationShader.shader" />
      <None Include="Assets\Plugins\Android\AndroidManifest.xml" />
      <None Include="Assets\Standard Assets\Effects\ImageEffects\Scripts\Post Effect Mask\Resources\Shaders\AlphaBlur.shader" />
@@ -215,9 +234,11 @@
      <None Include="Assets\Standard Assets\Effects\ToonShading\Shaders\ToonLitOutline.shader" />
      <None Include="Assets\Standard Assets\Effects\ImageEffects\Shaders\Contrast Stretch\Luminance.shader" />
      <None Include="Assets\Standard Assets\Effects\ToonShading\Shaders\ToonLit.shader" />
+     <None Include="Assets\StylizedWater\Scripts\Textures\Intersection\Readme.txt" />
      <None Include="Assets\Standard Assets\Effects\ImageEffects\Shaders\ColorCorrectionSelective.shader" />
      <None Include="Assets\RainEntertainment\FantasyMonster4\Diamond Lord\readMe.txt" />
      <None Include="Assets\Standard Assets\Effects\ImageEffects\Shaders\_DepthOfField\Bokeh34.shader" />
+     <None Include="Assets\StylizedWater\Scripts\Textures\Heightmap\Readme.txt" />
      <None Include="Assets\Post Effect Mask\Readme.txt" />
      <None Include="Assets\Standard Assets\Effects\ImageEffects\Shaders\CameraMotionBlurDX11.shader" />
      <None Include="Assets\Standard Assets\Effects\ImageEffects\Shaders\_BloomAndFlares\SeparableBlurPlus.shader" />
@@ -245,6 +266,7 @@
      <None Include="Assets\Little Heroes Mega Pack\Read me.txt" />
      <None Include="Assets\Cardboard\Resources\UI\CardboardReticleShader.shader" />
      <None Include="Assets\Standard Assets\Effects\ImageEffects\Shaders\Tonemapper.shader" />
+     <None Include="Assets\StylizedWater\Effects\Shaders\StylizedWater_Particle_Desktop.shader" />
      <None Include="Assets\Standard Assets\Effects\ImageEffects\Shaders\_BloomAndFlares\BrightPassFilter.shader" />
      <None Include="Assets\Standard Assets\Effects\ImageEffects\Shaders\_Antialiasing\FXAA2.shader" />
      <None Include="Assets\Standard Assets\Effects\ImageEffects\Shaders\ColorCorrection3DLut.shader" />
@@ -260,6 +282,7 @@
      <None Include="Assets\Standard Assets\Effects\TessellationShaders\Shaders\BumpedSpecularDisplacement.shader" />
      <None Include="Assets\Little Heroes Mega Pack\www.meshtint.com.txt" />
      <None Include="Assets\Standard Assets\Effects\ImageEffects\Shaders\_Antialiasing\FXAA3Console.shader" />
+     <None Include="Assets\StylizedWater\Scripts\Editor\SWS_NormalMapRenderer.shader" />
      <None Include="Assets\ShipGameStarterKit\ReadMe (Important!).txt" />
      <None Include="Assets\Standard Assets\Effects\ImageEffects\Shaders\_Antialiasing\FXAAPreset2.shader" />
      <None Include="Assets\Standard Assets\Effects\ImageEffects\Shaders\_BloomAndFlares\BlurAndFlares.shader" />

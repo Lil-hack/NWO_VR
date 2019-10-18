@@ -14,23 +14,104 @@ public class HeroesChoese : MonoBehaviour {
 	public int countHeroes=0;
 	public int nextBack=0;
 	public List<GameObject> myHeroes;
+	public CharacterManager charManger;
 	// Use this for initialization
+	public List <string> headers ;
+	public List <string> data ;
+	public ChangeManager changeManger;
 	void Start () {
 
-		//characterType = PlayerPrefs.GetInt ("Character");
 
+		changeManger=GameObject.FindGameObjectWithTag ("MenuManager").GetComponent<ChangeManager> ();
+
+
+
+	}
+	void OnEnable()
+	{
+		// данные пользователя
+		countHeroes=0;
+		int caseSwitch = 1;
 		foreach (var hero in heroes.GetComponent<Heroes>().heroes) {
-		
-			myHeroes.Add (Instantiate (hero,trans));
-			myHeroes[countHeroes].transform.localPosition = rangeHeroes * countHeroes;
-			ChangeLayers (myHeroes[countHeroes],layerType);
-		
-			countHeroes++;
+			
+			switch (caseSwitch)
+			{
+			case 1:
+				AddHero(hero);	
+				break;
+			case 2:
+				AddHero(hero);	
+				break;
+			case 3:
+				if (charManger.skin3 == 1) AddHero(hero);	
+				break;
+			case 4:
+				if (charManger.skin4 == 1) AddHero(hero);	
+				break;
+			case 5:
+				if (charManger.skin5 == 1) AddHero(hero);	
+				break;
+			case 6:
+				if (charManger.skin6 == 1) AddHero(hero);	
+				break;
+			case 7:
+				if (charManger.skin7 == 1) AddHero(hero);	
+				break;
+			case 8:
+				if (charManger.skin8 == 1) AddHero(hero);	
+				break;
+			case 9:
+				if (charManger.skin9 == 1) AddHero(hero);	
+				break;
+			case 10:
+				if (charManger.skin10 == 1) AddHero(hero);	
+				break;
+			case 11:
+				if (charManger.skin11 == 1) AddHero(hero);	
+				break;
+			case 12:
+				if (charManger.skin12 == 1) AddHero(hero);	
+				break;
+			case 13:
+				if (charManger.skin13 == 1) AddHero(hero);	
+				break;
+			case 14:
+				if (charManger.skin14 == 1) AddHero(hero);	
+				break;
+			case 15:
+				if (charManger.skin15 == 1) AddHero(hero);	
+				break;
+			case 16:
+				if (charManger.skin16 == 1) AddHero(hero);	
+				break;
+			case 17:
+				if (charManger.skin17 == 1) AddHero(hero);	
+				break;
+			case 18:
+				if (charManger.skin18 == 1) AddHero(hero);	
+				break;
+			case 19:
+				if (charManger.skin19 == 1) AddHero(hero);	
+				break;
+			case 20:
+				if (charManger.skin20 == 1) AddHero(hero);	
+				break;
+			}
+
+
+
+			caseSwitch++;
 		}
-		//hero=Instantiate(	heroes.GetComponent<Heroes>().heroes[characterType],trans);
-		//hero.layer = layerType;
 
+	}
+	private void AddHero(GameObject hero)
+	{
 
+		myHeroes.Add (Instantiate (hero,trans));
+		myHeroes[countHeroes].transform.localPosition = rangeHeroes * countHeroes;
+		ChangeLayers (myHeroes[countHeroes],layerType);
+
+		countHeroes++;
 	}
 	public static void ChangeLayers(GameObject go, int layer)
 	{
@@ -44,17 +125,20 @@ public class HeroesChoese : MonoBehaviour {
 	public void Next()
 	{if (nextBack < countHeroes-1) {
 			nextBack++;
-			trans.position += rangeHeroesNextBack;
+			trans.localPosition += rangeHeroesNextBack;
 		}
 	}
 	public void Back()
 	{if (nextBack != 0 ) {
 			nextBack--;
-			trans.position -= rangeHeroesNextBack;
+			trans.localPosition -= rangeHeroesNextBack;
 		}
 	}
 	public void Ok()
-	{PlayerPrefs.SetInt ("Skin", nextBack);
+	{
+		data.Clear ();
+		data.Add (nextBack.ToString ());
+		changeManger.ChangeMethod (headers, data);
 
 	}
 }

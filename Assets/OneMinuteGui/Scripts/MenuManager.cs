@@ -13,6 +13,7 @@ public class MenuManager : MonoBehaviour
 	public GameObject StartMenu;
 	public GameObject LoginMenu;
 	public GameObject RegMenu;
+	public GameObject Hero;
 	public GameObject ErrorMenu;
 	public Text ErrorText;
 
@@ -53,7 +54,10 @@ public class MenuManager : MonoBehaviour
 		{
 			return;
 		}
-
+		if(target==StartMenu)
+		{
+			Hero.SetActive (true);
+		}
 		if (m_navigationHistory.Count > 0)
 		{
 			Animate(m_navigationHistory[m_navigationHistory.Count - 1], false);
@@ -123,11 +127,8 @@ public class MenuManager : MonoBehaviour
 
     public void LogOut()
     {
-		PlayerPrefs.SetString ("uuid", null);
-		PlayerPrefs.SetString ("username",null);
-		PlayerPrefs.SetString ("first_name", null);
-		PlayerPrefs.SetString ("last_name", null);
-		PlayerPrefs.SetString ("email", null);
+
+		PlayerPrefs.DeleteAll ();
 		StartMenu.SetActive(false);
     }
 	public void ErrorClose()

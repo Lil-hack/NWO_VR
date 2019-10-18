@@ -13,6 +13,7 @@ public class Registr : MonoBehaviour {
 	public InputField firstName;
 	public InputField email;
 	public InputField password;
+	public CharacterManager charkManger;
 	// Use this for initialization
 	[System.Serializable]
 	public class User
@@ -54,7 +55,7 @@ public class Registr : MonoBehaviour {
 		public bool skin20;
 	}
 	void Start () {
-
+		charkManger=GameObject.FindGameObjectWithTag ("MenuManager").GetComponent<CharacterManager> ();
 	}
 
 
@@ -165,7 +166,9 @@ public class Registr : MonoBehaviour {
 				PlayerPrefs.SetInt ("skin18", me.skin18?1:0);
 				PlayerPrefs.SetInt ("skin19", me.skin19?1:0);
 				PlayerPrefs.SetInt ("skin20", me.skin20?1:0);
+				charkManger.UpdateStats ();
 				menu.GoToMenu (menu.StartMenu);
+				menu.RegClose ();
 			}
 
 

@@ -12,6 +12,7 @@ public class CharacterManager : MonoBehaviour {
 	public GameObject heroes;
 	public Transform trans;
 	public GameObject hero;
+	public GameObject mainSkin;
 	public int layerType;
 	// данные пользователя
 
@@ -50,7 +51,7 @@ public class CharacterManager : MonoBehaviour {
 
 	// Use this for initialization
 	void Start () {
-		
+		if (PlayerPrefs.GetString ("uuid").CompareTo ("")!=0) UpdateStats ();
 
 	}
 
@@ -59,12 +60,7 @@ public class CharacterManager : MonoBehaviour {
 		Destroy (hero);
 	}
 
-	void OnEnable()
-	{
-		// данные пользователя
 
-		UpdateStats ();
-	}
 
 	public static void ChangeLayers(GameObject go, int layer)
 	{
@@ -78,6 +74,7 @@ public class CharacterManager : MonoBehaviour {
 	public void UpdateStats()
 	{
 		Destroy (hero);
+		mainSkin.SetActive (true);
 		uuid=PlayerPrefs.GetString ("uuid");
 		username=PlayerPrefs.GetString ("username");
 		first_name=PlayerPrefs.GetString ("first_name");
@@ -135,11 +132,11 @@ public class CharacterManager : MonoBehaviour {
 		nameCharacter.text = username;
 		crytalText.text = crystal.ToString();
 		moneyText.text = money.ToString();
-		lvlText.text=string.Format("{0:0.###}", lvl);
-		characterType = skin;
+		lvlText.text=string.Format("{0:0.##}", lvl);
 
 
-		hero=Instantiate(	heroes.GetComponent<Heroes>().heroes[characterType],trans);
+
+		hero=Instantiate(	heroes.GetComponent<Heroes>().heroes[skin],trans);
 		//hero.layer = layerType;
 		ChangeLayers (hero,layerType);
 

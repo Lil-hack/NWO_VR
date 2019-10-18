@@ -43,11 +43,11 @@ Material:
         m_Offset: {x: 0, y: 0}
     m_Floats:
     - _FresnelBias: 0
-    - _FresnelPower: 2.1940298
-    - _FresnelScale: 1.2686567
+    - _FresnelPower: 4.68
+    - _FresnelScale: 1
     - _ReflDistort: 0.99758947
-    - _RefrDistort: 0.31343284
-    - _WaveScale: 0.07281132
+    - _RefrDistort: 0.754
+    - _WaveScale: 0.0471
     m_Colors:
     - _Color: {r: 1, g: 1, b: 1, a: 1}
     - _WaveSpeed: {r: 9, g: 5, b: -8, a: -4}
