@@ -14,6 +14,7 @@ public class Registr : MonoBehaviour {
 	public InputField email;
 	public InputField password;
 	public CharacterManager charkManger;
+	public GameObject loading;
 	// Use this for initialization
 	[System.Serializable]
 	public class User
@@ -63,7 +64,9 @@ public class Registr : MonoBehaviour {
 	{
 		if (!nickName.text.Equals("") && !password.text.Equals("") && !firstName.text.Equals("") && !email.text.Equals("")) {
 			if (CheckEmail (email.text)) {
+				loading.SetActive (true);
 				StartCoroutine (Upload ());
+
 			} else {
 				menu.GoToMenu (menu.ErrorMenu);
 				menu.ErrorText.text = "Неправильная почта!";
@@ -85,18 +88,21 @@ public class Registr : MonoBehaviour {
 		yield return www.Send();
 		if (www.isError) {
 			Debug.Log (www.error);
+			loading.SetActive (false);
 			menu.GoToMenu (menu.ErrorMenu);
 			menu.ErrorText.text = "Нет соединения!";
 		} else {
 			string json_user = www.downloadHandler.text;
 			long code = www.responseCode;
 				if (code==400) {
+				loading.SetActive (false);
 				menu.GoToMenu (menu.ErrorMenu);
 				menu.ErrorText.text = "Пользователь существует!";
 
 			}
 			else
 			{
+				
 				Debug.Log (json_user);
 				User me = JsonUtility.FromJson<User> (json_user);
 
@@ -125,6 +131,7 @@ public class Registr : MonoBehaviour {
 		yield return www.Send();
 		if (www.isError) {
 			Debug.Log (www.error);
+			loading.SetActive (false);
 			menu.GoToMenu (menu.ErrorMenu);
 			menu.ErrorText.text = "Нет соединения!";
 			StartCoroutine (DeleteUser (uuid));
@@ -132,6 +139,7 @@ public class Registr : MonoBehaviour {
 			string json_stat= www.downloadHandler.text;
 			long code = www.responseCode;
 			if (code==400) {
+				loading.SetActive (false);
 				menu.GoToMenu (menu.ErrorMenu);
 				menu.ErrorText.text = "Данные уже существуют!";
 				StartCoroutine (DeleteUser (uuid));
@@ -166,6 +174,7 @@ public class Registr : MonoBehaviour {
 				PlayerPrefs.SetInt ("skin18", me.skin18?1:0);
 				PlayerPrefs.SetInt ("skin19", me.skin19?1:0);
 				PlayerPrefs.SetInt ("skin20", me.skin20?1:0);
+				loading.SetActive (false);
 				charkManger.UpdateStats ();
 				menu.GoToMenu (menu.StartMenu);
 				menu.RegClose ();

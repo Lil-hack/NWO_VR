@@ -653,18 +653,18 @@ PlayerSettings:
       daydreamIconBackground: {fileID: 0}
   cloudServicesEnabled:
     Analytics: 0
-    Build: 1
-    Collab: 1
+    Build: 0
+    Collab: 0
     ErrorHub: 0
     Game_Performance: 0
     Hub: 0
     Purchasing: 0
-    UNet: 1
+    UNet: 0
     Unity_Ads: 0
   facebookSdkVersion: 7.9.1
   apiCompatibilityLevel: 2
-  cloudProjectId: be9740ac-f03f-4c09-a77e-939f5ab00925
-  projectName: Unity3D
-  organizationId: zikstudio
+  cloudProjectId: 183afef1-5316-4a71-a669-9783e524c474
+  projectName: Unity3D (1)
+  organizationId: zikstudio-as-publisher
   cloudEnabled: 0
   enableNewInputSystem: 0

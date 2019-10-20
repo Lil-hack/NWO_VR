@@ -9,7 +9,7 @@ public class ChangeManager : MonoBehaviour {
 	public string URL_API_USERS="https://api-user-game.herokuapp.com/users/";
 	public string URL_API_STATS="https://api-stats-game.herokuapp.com/stats/";
 	public CharacterManager charManger;
-
+	public GameObject loading;
 	// Use this for initialization
 	[System.Serializable]
 	public class User
@@ -59,7 +59,7 @@ public class ChangeManager : MonoBehaviour {
 
 	public void ChangeMethod(List <string> headers,List <string> data )
 	{
-
+		loading.SetActive (true);
 		StartCoroutine (ChangeMain (headers,data));
 
 	}
@@ -115,12 +115,13 @@ public class ChangeManager : MonoBehaviour {
 			PlayerPrefs.SetInt ("skin18", me.skin18?1:0);
 			PlayerPrefs.SetInt ("skin19", me.skin19?1:0);
 			PlayerPrefs.SetInt ("skin20", me.skin20?1:0);
+			loading.SetActive (false);
 			charManger.UpdateStats ();
 
 		} else 
 		{
 			Debug.Log (json_stat);
-
+			loading.SetActive (false);
 			menu.GoToMenu (menu.ErrorMenu);
 			menu.ErrorText.text = "Нет соединения!";
 		}

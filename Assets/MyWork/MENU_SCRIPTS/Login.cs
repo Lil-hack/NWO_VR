@@ -9,7 +9,7 @@ public class Login : MonoBehaviour {
 	public string URL_API_USERS="https://api-user-game.herokuapp.com//users/";
 	public InputField name;
 	public InputField password;
-
+	public GameObject loading;
 	public GetStats getStat;
 	// Use this for initialization
 	[System.Serializable]
@@ -31,7 +31,9 @@ public class Login : MonoBehaviour {
 	public void LoginBut()
 	{
 		if (!name.text.Equals("") && !password.text.Equals("")) {
+			loading.SetActive (true);
 			StartCoroutine (Upload ());
+
 		}
 	}
 	private IEnumerator Upload() {
@@ -42,18 +44,22 @@ public class Login : MonoBehaviour {
 
 		if (www.isError) {
 			Debug.Log (www.error);
+			loading.SetActive (false);
 			menu.GoToMenu (menu.ErrorMenu);
 			menu.ErrorText.text = "Нет соединения!";
+
 		} else {
 			string json_user = www.downloadHandler.text;
 			long code = www.responseCode;
 			if (code==401 || json_user.Equals("401")) {
 				Debug.Log (www.error);
+				loading.SetActive (false);
 				menu.GoToMenu (menu.ErrorMenu);
 				menu.ErrorText.text = "Неправильный логин или пароль!";
 
 			}
 			if (code==404 || json_user.Equals("404")) {
+				loading.SetActive (false);
 				menu.GoToMenu (menu.ErrorMenu);
 				menu.ErrorText.text = "С таким логином нет пользователя!";
 
@@ -69,7 +75,7 @@ public class Login : MonoBehaviour {
 				PlayerPrefs.SetString ("last_name", me.last_name);
 				PlayerPrefs.SetString ("email", me.email);
 				getStat.GetData ();
-
+				loading.SetActive (false);
 				menu.GoToMenu (menu.StartMenu);
 				menu.LoginClose ();
 			}

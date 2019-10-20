@@ -16,6 +16,7 @@ public class MenuManager : MonoBehaviour
 	public GameObject Hero;
 	public GameObject ErrorMenu;
 	public Text ErrorText;
+	public GetStats getStats;
 
 	[SerializeField]
 	private string m_animationPropertyName;
@@ -90,22 +91,15 @@ public class MenuManager : MonoBehaviour
 		}
 	}
 	public void StartGame(string scenename)
-	{	StartCoroutine(checkInternetConnection(scenename));
+
+	{	
+		getStats.GetDataForStart (scenename);
+	
 		
 	
 	}
 
-	private IEnumerator checkInternetConnection(string scenename){
-		WWW www = new WWW("http://google.com");
-		yield return www;
-		if (www.error != null) {
-			Debug.Log ("Error Connect");
-		} else {
-			Debug.Log ("sceneName to load: " + scenename);
-			SceneManager.LoadScene (scenename);
-		
-		}
-	} 
+
 
 	private void Awake()
 	{
@@ -126,10 +120,10 @@ public class MenuManager : MonoBehaviour
 	}
 
     public void LogOut()
-    {
-
+	{	
 		PlayerPrefs.DeleteAll ();
 		StartMenu.SetActive(false);
+		SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);
     }
 	public void ErrorClose()
 	{

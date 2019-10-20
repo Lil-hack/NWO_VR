@@ -91,6 +91,7 @@
      <Compile Include="Assets\MyWork\MENU_SCRIPTS\ChangeManager.cs" />
      <Compile Include="Assets\MyWork\MENU_SCRIPTS\GetStats.cs" />
      <Compile Include="Assets\MyWork\MENU_SCRIPTS\HerouesShop.cs" />
+     <Compile Include="Assets\MyWork\MENU_SCRIPTS\LoadingEnable.cs" />
      <Compile Include="Assets\MyWork\MENU_SCRIPTS\Login.cs" />
      <Compile Include="Assets\MyWork\MENU_SCRIPTS\Registr.cs" />
      <Compile Include="Assets\MyWork\ManagerGunRoom.cs" />

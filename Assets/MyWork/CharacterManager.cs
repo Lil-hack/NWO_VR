@@ -105,6 +105,9 @@ public class CharacterManager : MonoBehaviour {
 		skin19=PlayerPrefs.GetInt ("skin19");
 		skin20=PlayerPrefs.GetInt ("skin20");
 
+		hero=Instantiate(	heroes.GetComponent<Heroes>().heroes[skin],trans);
+		//hero.layer = layerType;
+		ChangeLayers (hero,layerType);
 		// данные пользователя
 		int i=1;
 		double lvl = 0.0;
@@ -136,9 +139,7 @@ public class CharacterManager : MonoBehaviour {
 
 
 
-		hero=Instantiate(	heroes.GetComponent<Heroes>().heroes[skin],trans);
-		//hero.layer = layerType;
-		ChangeLayers (hero,layerType);
+
 
 
 	}

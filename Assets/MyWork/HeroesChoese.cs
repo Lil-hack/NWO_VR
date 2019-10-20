@@ -27,17 +27,30 @@ public class HeroesChoese : MonoBehaviour {
 
 
 	}
+	void OnDisable()
+	{
+		foreach (var hero in myHeroes) {
+			Destroy (hero);
+		}
+		myHeroes.Clear();
+	}
 	void OnEnable()
 	{
 		// данные пользователя
+
 		countHeroes=0;
-		int caseSwitch = 1;
+		int caseSwitch = 0;
+
 		foreach (var hero in heroes.GetComponent<Heroes>().heroes) {
 			
 			switch (caseSwitch)
 			{
 			case 1:
-				AddHero(hero);	
+				Debug.Log (hero.name);
+
+					AddHero (hero);	
+
+
 				break;
 			case 2:
 				AddHero(hero);	
@@ -137,7 +150,9 @@ public class HeroesChoese : MonoBehaviour {
 	public void Ok()
 	{
 		data.Clear ();
-		data.Add (nextBack.ToString ());
+		string name=myHeroes [nextBack].name.Replace("(Clone)","");
+
+		data.Add (name);
 		changeManger.ChangeMethod (headers, data);
 
 	}
