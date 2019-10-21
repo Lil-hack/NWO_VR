@@ -15,7 +15,10 @@ public class MenuManager : MonoBehaviour
 	public GameObject RegMenu;
 	public GameObject Hero;
 	public GameObject ErrorMenu;
+	public GameObject ErrorShop;
+	public GameObject BuyReady;
 	public Text ErrorText;
+	public Text ErrorShopText;
 	public GetStats getStats;
 
 	[SerializeField]
@@ -42,8 +45,10 @@ public class MenuManager : MonoBehaviour
 	 void Start()
 	{
 		if (PlayerPrefs.GetString ("uuid").CompareTo ("")==0) {
-			Debug.Log (PlayerPrefs.GetString ("uuid"));
+			m_navigationHistory = new List<GameObject>{m_initialScreen};
+			GoToMenu (m_initialScreen);
 		} else {
+			m_navigationHistory = new List<GameObject>{StartMenu};
 			GoToMenu (StartMenu);
 			Debug.Log (PlayerPrefs.GetString ("uuid"));
 		};
@@ -103,7 +108,8 @@ public class MenuManager : MonoBehaviour
 
 	private void Awake()
 	{
-		m_navigationHistory = new List<GameObject>{m_initialScreen};
+		
+
 	}
 
 	public void LoginMethod ()

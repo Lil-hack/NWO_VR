@@ -1,15 +1,19 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 
 public class HerouesShop : MonoBehaviour {
 
 
 	public int characterType;
+	public Text crystal;
+	public Text money;
 	public GameObject heroes;
 	public Transform trans;
 	public Vector3 rangeHeroes;
 	public Vector3 rangeHeroesNextBack;
+	public GameObject heroListShop;
 	public int layerType;
 	public int countHeroes=0;
 	public int nextBack=0;
@@ -19,11 +23,14 @@ public class HerouesShop : MonoBehaviour {
 	public List <string> headers ;
 	public List <string> data ;
 	public ChangeManager changeManger;
+	public MenuManager menu;
+	public int crystalForBuy;
+	public int moneyForBuy;
 	void Start () {
 
 
 		changeManger=GameObject.FindGameObjectWithTag ("MenuManager").GetComponent<ChangeManager> ();
-
+		menu=GameObject.FindGameObjectWithTag ("MenuManager").GetComponent<MenuManager> ();
 
 
 	}
@@ -37,6 +44,11 @@ public class HerouesShop : MonoBehaviour {
 	void OnEnable()
 	{
 		// данные пользователя
+		CheckHeroes();
+	}
+
+	private void CheckHeroes()
+	{
 		countHeroes=0;
 		int caseSwitch = 0;
 		foreach (var hero in heroes.GetComponent<Heroes>().heroes) {
@@ -103,7 +115,10 @@ public class HerouesShop : MonoBehaviour {
 
 			caseSwitch++;
 		}
-
+		crystalForBuy=myHeroes [nextBack].GetComponent<HeroStartRotate> ().crystal;
+		moneyForBuy = myHeroes [nextBack].GetComponent<HeroStartRotate> ().money;
+		crystal.text = crystalForBuy.ToString();
+		money.text = moneyForBuy.ToString ();
 	}
 	private void AddHero(GameObject hero)
 	{
@@ -126,20 +141,66 @@ public class HerouesShop : MonoBehaviour {
 	public void Next()
 	{if (nextBack < countHeroes-1) {
 			nextBack++;
+			crystalForBuy=myHeroes [nextBack].GetComponent<HeroStartRotate> ().crystal;
+			moneyForBuy = myHeroes [nextBack].GetComponent<HeroStartRotate> ().money;
+			crystal.text = crystalForBuy.ToString();
+			money.text = moneyForBuy.ToString ();
 			trans.localPosition += rangeHeroesNextBack;
 		}
 	}
 	public void Back()
 	{if (nextBack != 0 ) {
 			nextBack--;
+			crystalForBuy=myHeroes [nextBack].GetComponent<HeroStartRotate> ().crystal;
+			moneyForBuy = myHeroes [nextBack].GetComponent<HeroStartRotate> ().money;
+			crystal.text = crystalForBuy.ToString();
+			money.text = moneyForBuy.ToString ();
 			trans.localPosition -= rangeHeroesNextBack;
 		}
 	}
-	public void Ok()
+	public void Buy()
 	{
 		data.Clear ();
-		data.Add (nextBack.ToString ());
-		changeManger.ChangeMethod (headers, data);
+		headers.Clear ();
+		string name = myHeroes [nextBack].name.Replace ("(Clone)", "");
 
+	
+		int moneyCount = PlayerPrefs.GetInt ("money");
+		int crystalCount = PlayerPrefs.GetInt ("crystal");
+
+		int disMoney = moneyCount - moneyForBuy;
+		int disCrystal = crystalCount - crystalForBuy;
+		if (disMoney > 0 && disCrystal > 0) {
+
+			headers.Add ("skin" + name);
+			headers.Add ("money");
+			headers.Add ("crystal");
+			headers.Add ("skin");
+
+			data.Add ("true");
+			data.Add (disMoney.ToString ());
+			data.Add (disCrystal.ToString ());
+			data.Add (name);
+			menu.GoToMenu (menu.BuyReady);
+			heroListShop.SetActive (false);
+		
+		} else {
+		
+			menu.GoToMenu (menu.ErrorShop);
+			menu.ErrorShopText.text = "Недостаточно ресурсов!";
+			heroListShop.SetActive (false);
+		}
 	}
+
+		public void BuyEnd()
+		{
+			changeManger.ChangeMethod (headers, data);
+			menu.GoToMenu (menu.StartMenu);
+			Back ();
+
+		}
+			
+//		changeManger.ChangeMethod (headers, data);
+
+
 }
