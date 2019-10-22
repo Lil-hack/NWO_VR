@@ -43,16 +43,16 @@ public class ManagerStartRoom : MonoBehaviour {
 
 	void Start() {
 		if (botMode == false) {
-			//userid = PlayerPrefs.GetString ("Name");
-			userid=System.Guid.NewGuid().ToString();
+			userid = PlayerPrefs.GetString ("username");
+//			userid=System.Guid.NewGuid().ToString();
 			headBot.trackRotation = true;
 		} else {
 
-			userid=System.Guid.NewGuid().ToString();
+			userid = PlayerPrefs.GetString ("username");
 			headBot.trackRotation = false;
 		}
 		skinList = heroesAll.GetComponent<Heroes> ().heroes;
-
+		skin=PlayerPrefs.GetInt ("skin").ToString();
 		Application.runInBackground = true;
 
 		// Create a random userid 

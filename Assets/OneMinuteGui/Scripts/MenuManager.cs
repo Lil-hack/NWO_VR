@@ -20,6 +20,7 @@ public class MenuManager : MonoBehaviour
 	public Text ErrorText;
 	public Text ErrorShopText;
 	public GetStats getStats;
+	public GameObject heroIntro;
 
 	[SerializeField]
 	private string m_animationPropertyName;
@@ -46,9 +47,11 @@ public class MenuManager : MonoBehaviour
 	{
 		if (PlayerPrefs.GetString ("uuid").CompareTo ("")==0) {
 			m_navigationHistory = new List<GameObject>{m_initialScreen};
+			heroIntro.SetActive (true);
 			GoToMenu (m_initialScreen);
 		} else {
 			m_navigationHistory = new List<GameObject>{StartMenu};
+			heroIntro.SetActive (false);
 			GoToMenu (StartMenu);
 			Debug.Log (PlayerPrefs.GetString ("uuid"));
 		};
