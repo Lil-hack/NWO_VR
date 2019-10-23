@@ -1225,7 +1225,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 48de5564f7a4847e9a9296da89da6847, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  crystal: 4
+  crystal: 10
   money: 15
 --- !u!137 &137423710286782536
 SkinnedMeshRenderer:

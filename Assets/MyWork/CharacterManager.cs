@@ -8,6 +8,11 @@ public class CharacterManager : MonoBehaviour {
 	public Text crytalText;
 	public Text moneyText;
 	public Text lvlText;
+
+	public Text nickNameText;
+	public Text nameText;
+	public Text mailText;
+
 	public int characterType;
 	public GameObject heroes;
 	public Transform trans;
@@ -23,6 +28,7 @@ public class CharacterManager : MonoBehaviour {
 	public int exp;
 	public int money;
 	public int crystal;
+	public int rating;
 	public int skin;
 	public int skin1;
 	public int skin2;
@@ -83,6 +89,7 @@ public class CharacterManager : MonoBehaviour {
 		exp = PlayerPrefs.GetInt ("exp");
 		money=PlayerPrefs.GetInt ("money");
 		crystal=PlayerPrefs.GetInt ("crystal");
+		rating=PlayerPrefs.GetInt ("rating");
 		skin=PlayerPrefs.GetInt ("skin");
 		skin1=PlayerPrefs.GetInt ("skin1");
 		skin2=PlayerPrefs.GetInt ("skin2");
@@ -135,6 +142,7 @@ public class CharacterManager : MonoBehaviour {
 		nameCharacter.text = username;
 		crytalText.text = crystal.ToString();
 		moneyText.text = money.ToString();
+
 		lvlText.text=string.Format("{0:0.##}", lvl);
 
 

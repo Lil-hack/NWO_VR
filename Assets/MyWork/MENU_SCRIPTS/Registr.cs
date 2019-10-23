@@ -33,6 +33,7 @@ public class Registr : MonoBehaviour {
 		public int exp;
 		public int crystal;
 		public int money;
+		public int rating;
 		public int skin;
 		public bool skin1;
 		public bool skin2;
@@ -153,6 +154,7 @@ public class Registr : MonoBehaviour {
 				PlayerPrefs.SetInt ("exp", me.exp);
 				PlayerPrefs.SetInt ("crystal", me.crystal);
 				PlayerPrefs.SetInt ("money", me.money);
+				PlayerPrefs.SetInt ("rating", me.rating);
 				PlayerPrefs.SetInt ("skin", me.skin);
 				PlayerPrefs.SetInt ("skin1", me.skin1?1:0);
 				PlayerPrefs.SetInt ("skin2", me.skin2?1:0);

@@ -113,6 +113,7 @@
      <Compile Include="Assets\MyWork\ShoterManagerBoss.cs" />
      <Compile Include="Assets\MyWork\StartBoss.cs" />
      <Compile Include="Assets\MyWork\ToadManager.cs" />
+     <Compile Include="Assets\MyWork\VIgnetteCameraME.cs" />
      <Compile Include="Assets\MyWork\WebCam.cs" />
      <Compile Include="Assets\OneMinuteGui\Scripts\MenuManager.cs" />
      <Compile Include="Assets\PlayerIO\Scripts\AnimationC.cs" />
