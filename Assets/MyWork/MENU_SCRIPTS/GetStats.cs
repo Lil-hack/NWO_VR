@@ -69,6 +69,7 @@ public class GetStats : MonoBehaviour {
 			Debug.Log (www.error);
 			loading.SetActive (false);
 			menu.GoToMenu (menu.ErrorMenu);
+			menu.Hero.SetActive (false);
 			menu.ErrorText.text = "Нет соединения!";
 		} else {
 			string json_stat = www.downloadHandler.text;
@@ -137,6 +138,7 @@ public class GetStats : MonoBehaviour {
 			Debug.Log (www.error);
 			loading.SetActive (false);
 			menu.GoToMenu (menu.ErrorMenu);
+			menu.Hero.SetActive (false);
 			menu.ErrorText.text = "Нет соединения!";
 		} else {
 			string json_stat = www.downloadHandler.text;

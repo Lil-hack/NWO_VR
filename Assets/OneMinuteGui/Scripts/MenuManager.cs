@@ -137,6 +137,7 @@ public class MenuManager : MonoBehaviour
 	public void ErrorClose()
 	{
 		ErrorMenu.SetActive (false);
+		Hero.SetActive (true);
 	}
 	public void RegClose()
 	{

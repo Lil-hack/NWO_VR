@@ -125,6 +125,7 @@ public class ChangeManager : MonoBehaviour {
 			Debug.Log (json_stat);
 			loading.SetActive (false);
 			menu.GoToMenu (menu.ErrorMenu);
+			menu.Hero.SetActive (false);
 			menu.ErrorText.text = "Нет соединения!";
 		}
 

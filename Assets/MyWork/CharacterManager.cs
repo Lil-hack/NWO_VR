@@ -9,9 +9,7 @@ public class CharacterManager : MonoBehaviour {
 	public Text moneyText;
 	public Text lvlText;
 
-	public Text nickNameText;
-	public Text nameText;
-	public Text mailText;
+
 
 	public int characterType;
 	public GameObject heroes;

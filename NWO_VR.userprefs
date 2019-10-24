@@ -1,28 +1,34 @@
 ﻿<Properties StartupItem="Assembly-CSharp.csproj">
-  <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" PreferredExecutionTarget="Unity.Instance.Unity Editor" />
-  <MonoDevelop.Ide.Workbench ActiveDocument="Assets/OneMinuteGui/Scripts/MenuManager.cs">
+  <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" />
+  <MonoDevelop.Ide.Workbench ActiveDocument="Assets/MyWork/MENU_SCRIPTS/DeleteAcc.cs">
     <Files>
+      <File FileName="Assets/MyWork/MENU_SCRIPTS/OptionValueCam.cs" Line="15" Column="18" />
+      <File FileName="Assets/MyWork/HeroStartRotate.cs" Line="1" Column="1" />
       <File FileName="Assets/MyWork/PortalInPlace.cs" Line="1" Column="1" />
-      <File FileName="Assets/MyWork/ManaggerBossRoom.cs" Line="446" Column="1" />
+      <File FileName="Assets/MyWork/ManaggerBossRoom.cs" Line="1" Column="1" />
       <File FileName="Assets/MyWork/ShoterManagerBoss.cs" Line="1" Column="1" />
       <File FileName="Assets/MyWork/ShootTrigerBoss.cs" Line="1" Column="1" />
       <File FileName="Assets/MyWork/PlayerMoveControll.cs" Line="1" Column="1" />
       <File FileName="Assets/MyWork/GetDamageBossManager.cs" Line="1" Column="1" />
       <File FileName="Assets/MyWork/PlayerInfo.cs" Line="1" Column="1" />
-      <File FileName="Assets/MyWork/StartBoss.cs" Line="9" Column="2" />
-      <File FileName="Assets/MyWork/MENU_SCRIPTS/Registr.cs" Line="144" Column="52" />
-      <File FileName="Assets/MyWork/CharacterManager.cs" Line="109" Column="28" />
+      <File FileName="Assets/MyWork/StartBoss.cs" Line="1" Column="1" />
+      <File FileName="Assets/MyWork/MENU_SCRIPTS/Registr.cs" Line="126" Column="3" />
+      <File FileName="Assets/MyWork/CharacterManager.cs" Line="125" Column="5" />
       <File FileName="Assets/ShipGameStarterKit/Scripts/Game/Water.cs" Line="1" Column="1" />
       <File FileName="Assets/ShipGameStarterKit/Scripts/Game/RepositionWater.cs" Line="26" Column="15" />
-      <File FileName="Assets/MyWork/MENU_SCRIPTS/Login.cs" Line="69" Column="1" />
-      <File FileName="Assets/OneMinuteGui/Scripts/MenuManager.cs" Line="20" Column="1" />
-      <File FileName="Assets/MyWork/HeroesChoese.cs" Line="36" Column="3" />
-      <File FileName="Assets/MyWork/HeroStartRotate.cs" Line="8" Column="17" />
-      <File FileName="Assets/MyWork/MENU_SCRIPTS/ChangeBut.cs" Line="9" Column="36" />
-      <File FileName="Assets/MyWork/MENU_SCRIPTS/ChangeManager.cs" Line="114" Column="47" />
-      <File FileName="Assets/MyWork/MENU_SCRIPTS/HerouesShop.cs" Line="36" Column="3" />
-      <File FileName="Assets/MyWork/MENU_SCRIPTS/GetStats.cs" Line="113" Column="4" />
-      <File FileName="Assets/MyWork/MENU_SCRIPTS/LoadingEnable.cs" Line="14" Column="1" />
+      <File FileName="Assets/MyWork/MENU_SCRIPTS/Login.cs" Line="4" Column="1" />
+      <File FileName="Assets/MyWork/HeroesChoese.cs" Line="1" Column="1" />
+      <File FileName="Assets/MyWork/MENU_SCRIPTS/ChangeBut.cs" Line="9" Column="22" />
+      <File FileName="Assets/MyWork/MENU_SCRIPTS/HerouesShop.cs" Line="33" Column="1" />
+      <File FileName="Assets/MyWork/MENU_SCRIPTS/GetStats.cs" Line="1" Column="1" />
+      <File FileName="Assets/MyWork/MENU_SCRIPTS/LoadingEnable.cs" Line="1" Column="1" />
+      <File FileName="Assets/MyWork/FindRoomButton.cs" Line="1" Column="1" />
+      <File FileName="Assets/MyWork/ManagerStartRoom.cs" Line="38" Column="23" />
+      <File FileName="Assets/MyWork/VIgnetteCameraME.cs" Line="15" Column="23" />
+      <File FileName="Assets/Standard Assets/Effects/ImageEffects/Scripts/VignetteAndChromaticAberration.cs" Line="9" Column="66" />
+      <File FileName="Assets/MyWork/WebCam.cs" Line="29" Column="3" />
+      <File FileName="Assets/MyWork/MENU_SCRIPTS/DeleteAcc.cs" Line="20" Column="32" />
+      <File FileName="Assets/OneMinuteGui/Scripts/MenuManager.cs" Line="131" Column="25" />
     </Files>
   </MonoDevelop.Ide.Workbench>
   <MonoDevelop.Ide.DebuggingService.Breakpoints>
