@@ -95,6 +95,7 @@
      <Compile Include="Assets\MyWork\MENU_SCRIPTS\LoadingEnable.cs" />
      <Compile Include="Assets\MyWork\MENU_SCRIPTS\Login.cs" />
      <Compile Include="Assets\MyWork\MENU_SCRIPTS\OptionValueCam.cs" />
+     <Compile Include="Assets\MyWork\MENU_SCRIPTS\Record.cs" />
      <Compile Include="Assets\MyWork\MENU_SCRIPTS\Registr.cs" />
      <Compile Include="Assets\MyWork\MENU_SCRIPTS\TelegramChat.cs" />
      <Compile Include="Assets\MyWork\ManagerGunRoom.cs" />

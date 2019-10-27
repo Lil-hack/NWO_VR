@@ -68,7 +68,7 @@ public class GetStats : MonoBehaviour {
 		if (www.isError) {
 			Debug.Log (www.error);
 			loading.SetActive (false);
-			menu.GoToMenu (menu.ErrorMenu);
+			menu.GoToMenu (menu.ErrorMenu2);
 			menu.Hero.SetActive (false);
 			menu.ErrorText.text = "Нет соединения!";
 		} else {
@@ -76,7 +76,7 @@ public class GetStats : MonoBehaviour {
 			long code = www.responseCode;
 			if (code==400) {
 				loading.SetActive (false);
-				menu.GoToMenu (menu.ErrorMenu);
+				menu.GoToMenu (menu.ErrorMenu2);
 				menu.ErrorText.text = "Ошибка при получении данных!";
 
 			}
@@ -137,7 +137,7 @@ public class GetStats : MonoBehaviour {
 		if (www.isError) {
 			Debug.Log (www.error);
 			loading.SetActive (false);
-			menu.GoToMenu (menu.ErrorMenu);
+			menu.GoToMenu (menu.ErrorMenu2);
 			menu.Hero.SetActive (false);
 			menu.ErrorText.text = "Нет соединения!";
 		} else {
@@ -145,7 +145,7 @@ public class GetStats : MonoBehaviour {
 			long code = www.responseCode;
 			if (code==400) {
 				loading.SetActive (false);
-				menu.GoToMenu (menu.ErrorMenu);
+				menu.GoToMenu (menu.ErrorMenu2);
 				menu.ErrorText.text = "Ошибка при получении данных!";
 
 			}

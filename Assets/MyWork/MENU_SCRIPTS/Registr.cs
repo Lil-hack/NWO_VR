@@ -69,7 +69,7 @@ public class Registr : MonoBehaviour {
 				StartCoroutine (Upload ());
 
 			} else {
-				menu.GoToMenu (menu.ErrorMenu);
+				menu.GoToMenu (menu.ErrorMenu2);
 				menu.ErrorText.text = "Неправильная почта!";
 			}
 
@@ -90,14 +90,14 @@ public class Registr : MonoBehaviour {
 		if (www.isError) {
 			Debug.Log (www.error);
 			loading.SetActive (false);
-			menu.GoToMenu (menu.ErrorMenu);
+			menu.GoToMenu (menu.ErrorMenu2);
 			menu.ErrorText.text = "Нет соединения!";
 		} else {
 			string json_user = www.downloadHandler.text;
 			long code = www.responseCode;
 				if (code==400) {
 				loading.SetActive (false);
-				menu.GoToMenu (menu.ErrorMenu);
+				menu.GoToMenu (menu.ErrorMenu2);
 				menu.ErrorText.text = "Пользователь существует!";
 
 			}
@@ -133,7 +133,7 @@ public class Registr : MonoBehaviour {
 		if (www.isError) {
 			Debug.Log (www.error);
 			loading.SetActive (false);
-			menu.GoToMenu (menu.ErrorMenu);
+			menu.GoToMenu (menu.ErrorMenu2);
 			menu.ErrorText.text = "Нет соединения!";
 			StartCoroutine (DeleteUser (uuid));
 		} else {
@@ -141,7 +141,7 @@ public class Registr : MonoBehaviour {
 			long code = www.responseCode;
 			if (code==400) {
 				loading.SetActive (false);
-				menu.GoToMenu (menu.ErrorMenu);
+				menu.GoToMenu (menu.ErrorMenu2);
 				menu.ErrorText.text = "Данные уже существуют!";
 				StartCoroutine (DeleteUser (uuid));
 			}

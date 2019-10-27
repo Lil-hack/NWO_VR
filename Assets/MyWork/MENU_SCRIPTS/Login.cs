@@ -45,7 +45,7 @@ public class Login : MonoBehaviour {
 		if (www.isError) {
 			Debug.Log (www.error);
 			loading.SetActive (false);
-			menu.GoToMenu (menu.ErrorMenu);
+			menu.GoToMenu (menu.ErrorMenu2);
 			menu.ErrorText.text = "Нет соединения!";
 
 		} else {
@@ -54,13 +54,13 @@ public class Login : MonoBehaviour {
 			if (code==401 || json_user.Equals("401")) {
 				Debug.Log (www.error);
 				loading.SetActive (false);
-				menu.GoToMenu (menu.ErrorMenu);
+				menu.GoToMenu (menu.ErrorMenu2);
 				menu.ErrorText.text = "Неправильный логин или пароль!";
 
 			}
 			if (code==404 || json_user.Equals("404")) {
 				loading.SetActive (false);
-				menu.GoToMenu (menu.ErrorMenu);
+				menu.GoToMenu (menu.ErrorMenu2);
 				menu.ErrorText.text = "С таким логином нет пользователя!";
 
 			} 
@@ -75,7 +75,7 @@ public class Login : MonoBehaviour {
 				PlayerPrefs.SetString ("last_name", me.last_name);
 				PlayerPrefs.SetString ("email", me.email);
 				getStat.GetData ();
-				loading.SetActive (false);
+
 				menu.GoToMenu (menu.StartMenu);
 				menu.LoginClose ();
 			}

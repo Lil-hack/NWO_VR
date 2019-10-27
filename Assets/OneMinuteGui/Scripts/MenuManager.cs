@@ -16,8 +16,10 @@ public class MenuManager : MonoBehaviour
 	public GameObject Hero;
 	public GameObject ErrorMenu;
 	public GameObject ErrorShop;
+	public GameObject ErrorMenu2;
 	public GameObject BuyReady;
 	public Text ErrorText;
+	public Text ErrorText2;
 	public Text ErrorShopText;
 	public GetStats getStats;
 	public GameObject heroIntro;

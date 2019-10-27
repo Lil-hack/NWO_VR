@@ -138,6 +138,7 @@
 'Assets/MyWork/MENU_SCRIPTS/LoadingEnable.cs'
 'Assets/MyWork/MENU_SCRIPTS/Login.cs'
 'Assets/MyWork/MENU_SCRIPTS/OptionValueCam.cs'
+'Assets/MyWork/MENU_SCRIPTS/Record.cs'
 'Assets/MyWork/MENU_SCRIPTS/Registr.cs'
 'Assets/MyWork/MENU_SCRIPTS/TelegramChat.cs'
 'Assets/MyWork/ManagerGunRoom.cs'

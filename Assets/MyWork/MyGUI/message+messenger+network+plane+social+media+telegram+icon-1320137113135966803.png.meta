@@ -1,6 +1,6 @@
 fileFormatVersion: 2
-guid: 57ec3c10eb8bb4724b6b5ba1de8a15e2
-timeCreated: 1571954886
+guid: 9ac05fcc0c684466ca106227f446675d
+timeCreated: 1571959346
 licenseType: Pro
 TextureImporter:
   fileIDToRecycleName: {}
@@ -75,13 +75,13 @@ TextureImporter:
     allowsAlphaSplitting: 0
     overridden: 0
   - buildTarget: Android
-    maxTextureSize: 512
-    textureFormat: 47
+    maxTextureSize: 2048
+    textureFormat: -1
     textureCompression: 1
     compressionQuality: 50
     crunchedCompression: 0
     allowsAlphaSplitting: 0
-    overridden: 1
+    overridden: 0
   - buildTarget: Tizen
     maxTextureSize: 2048
     textureFormat: -1
