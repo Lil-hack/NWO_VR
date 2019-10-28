@@ -26,8 +26,8 @@ Material:
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
     - _MainTex:
-        m_Texture: {fileID: 2800000, guid: ecff4bc3f7324bf4ab149e64888c00d5, type: 3}
-        m_Scale: {x: 1, y: 1}
+        m_Texture: {fileID: 2800000, guid: 1ae028fadf369924aaaa366a26d4f695, type: 3}
+        m_Scale: {x: 2, y: 2}
         m_Offset: {x: 0, y: 0}
     - _SecondTex:
         m_Texture: {fileID: 2800000, guid: 32a1865a0105ba84cb7efe30ed0bb9c9, type: 3}
@@ -35,6 +35,7 @@ Material:
         m_Offset: {x: 0, y: 0}
     m_Floats:
     - _Cutoff: 0.5
+    - _Intensity: 1
     - _Occlusion: 1
     m_Colors:
     - _Color: {r: 1, g: 1, b: 1, a: 1}

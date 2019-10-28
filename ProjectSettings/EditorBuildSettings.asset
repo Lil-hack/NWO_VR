@@ -6,20 +6,23 @@ EditorBuildSettings:
   serializedVersion: 2
   m_Scenes:
   - enabled: 1
-    path: Assets/MyWork/StartRoom.unity
-    guid: 00000000000000000000000000000000
+    path: Assets/MyWork/SnecesMY/StartRoom.unity
+    guid: 89315a5aca3d34830a94750f0df53eaa
   - enabled: 1
-    path: Assets/MyWork/MainRoom.unity
+    path: Assets/MyWork/SnecesMY/MainRoom.unity
     guid: c53aff4a457ef49778c8c92dc9da0fc8
   - enabled: 1
-    path: Assets/MyWork/WalkRoomOne.unity
+    path: Assets/MyWork/SnecesMY/WalkRoomOne.unity
     guid: 1a4047b39d7194b3dbfbe4312c97dd37
   - enabled: 1
-    path: Assets/MyWork/GunRoomZero.unity
+    path: Assets/MyWork/SnecesMY/GunRoomZero.unity
     guid: 70e5bb38e0b4f4679bce8b800c55e1b4
   - enabled: 1
-    path: Assets/MyWork/WalkRoomZ.unity
+    path: Assets/MyWork/SnecesMY/WalkRoomZ.unity
     guid: c309d7f7179aa4476941fccb246e4c10
   - enabled: 1
-    path: Assets/MyWork/BossRoomZero.unity
+    path: Assets/MyWork/SnecesMY/BossRoomZero.unity
     guid: 6b8b42632389242dd89e8013932f1ee0
+  - enabled: 1
+    path: Assets/MyWork/SnecesMY/ShipZero.unity
+    guid: 00000000000000000000000000000000

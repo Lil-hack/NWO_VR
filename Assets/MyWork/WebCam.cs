@@ -60,7 +60,7 @@ public class WebCam : MonoBehaviour
 	private IEnumerator GetPixel()
 	{metkaMove = false;
 
-		yield return new WaitForSeconds(0.1f);
+		yield return new WaitForSeconds(0.2f);
 
 		metkaMove = true;
 		textureData1 = cam_texture.GetPixel (640, 360);

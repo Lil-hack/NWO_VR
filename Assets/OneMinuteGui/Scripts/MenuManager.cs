@@ -103,7 +103,12 @@ public class MenuManager : MonoBehaviour
 	public void StartGame(string scenename)
 
 	{	
-		getStats.GetDataForStart (scenename);
+		if (PlayerPrefs.GetInt ("exp") == 0) {
+			getStats.GetDataForStart ("ShipZero");
+		} else {
+			getStats.GetDataForStart (scenename);
+		}
+	
 	
 		
 	
