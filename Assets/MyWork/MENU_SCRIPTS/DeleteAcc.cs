@@ -34,7 +34,7 @@ public class DeleteAcc : MonoBehaviour {
 		if (www.isError) {
 			Debug.Log (www.error);
 			loading.SetActive (false);
-			menu.GoToMenu (menu.ErrorMenu2);
+			menu.GoToMenu (menu.ErrorMenu);
 			menu.ErrorText.text = "Нет соединения!";
 		} else {
 			UnityWebRequest www2 = UnityWebRequest.Get (URL_API_STATS + uuid + "/");
@@ -45,7 +45,7 @@ public class DeleteAcc : MonoBehaviour {
 			if (www2.isError) {
 				Debug.Log (www.error);
 				loading.SetActive (false);
-				menu.GoToMenu (menu.ErrorMenu2);
+				menu.GoToMenu (menu.ErrorMenu);
 				menu.ErrorText.text = "Нет соединения!";
 			} else {
 				menu.LogOut ();
