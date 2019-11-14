@@ -6,23 +6,29 @@ EditorBuildSettings:
   serializedVersion: 2
   m_Scenes:
   - enabled: 1
-    path: Assets/MyWork/SnecesMY/StartRoom.unity
+    path: Assets/MyWork/SnecesMY/InGame/StartRoom.unity
     guid: 89315a5aca3d34830a94750f0df53eaa
   - enabled: 1
-    path: Assets/MyWork/SnecesMY/MainRoom.unity
+    path: Assets/MyWork/SnecesMY/InGame/MainRoom.unity
     guid: c53aff4a457ef49778c8c92dc9da0fc8
   - enabled: 1
-    path: Assets/MyWork/SnecesMY/WalkRoomOne.unity
+    path: Assets/MyWork/SnecesMY/InGame/WalkRoomOne.unity
     guid: 1a4047b39d7194b3dbfbe4312c97dd37
   - enabled: 1
-    path: Assets/MyWork/SnecesMY/GunRoomZero.unity
+    path: Assets/MyWork/SnecesMY/InGame/GunRoomZero.unity
     guid: 70e5bb38e0b4f4679bce8b800c55e1b4
   - enabled: 1
-    path: Assets/MyWork/SnecesMY/WalkRoomZ.unity
+    path: Assets/MyWork/SnecesMY/InGame/WalkRoomZ.unity
     guid: c309d7f7179aa4476941fccb246e4c10
   - enabled: 1
-    path: Assets/MyWork/SnecesMY/BossRoomZero.unity
+    path: Assets/MyWork/SnecesMY/InGame/BossRoomZero.unity
     guid: 6b8b42632389242dd89e8013932f1ee0
   - enabled: 1
-    path: Assets/MyWork/SnecesMY/ShipZero.unity
+    path: Assets/MyWork/SnecesMY/InGame/OceanZero.unity
+    guid: 2a6403d3416664a76b1c451dd1b96f81
+  - enabled: 1
+    path: Assets/MyWork/SnecesMY/InGame/ShipZero.unity
+    guid: 523a4c0cc4e0d47e1a2ed56f661ec84e
+  - enabled: 1
+    path: Assets/MyWork/SnecesMY/InGame/LoadingZero.unity
     guid: 00000000000000000000000000000000

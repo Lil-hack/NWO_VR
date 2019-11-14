@@ -83,7 +83,10 @@
      <Compile Include="Assets\MyWork\FindRoomButton.cs" />
      <Compile Include="Assets\MyWork\FireBallDamage.cs" />
      <Compile Include="Assets\MyWork\FireballController.cs" />
+     <Compile Include="Assets\MyWork\GameScripts 1\WalkSoloHero.cs" />
+     <Compile Include="Assets\MyWork\GameScripts\BlackCamera.cs" />
      <Compile Include="Assets\MyWork\GameScripts\Dialog.cs" />
+     <Compile Include="Assets\MyWork\GameScripts\LoadingMangerScene.cs" />
      <Compile Include="Assets\MyWork\GetDamageBossManager.cs" />
      <Compile Include="Assets\MyWork\HeroStartRotate.cs" />
      <Compile Include="Assets\MyWork\Heroes.cs" />

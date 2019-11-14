@@ -181,7 +181,8 @@ public class GetStats : MonoBehaviour {
 					PlayerPrefs.SetInt ("skin20", me.skin20 ? 1 : 0);
 					loading.SetActive (false);
 					charkManger.UpdateStats ();
-					SceneManager.LoadScene (scenename);
+					PlayerPrefs.SetString("scene",scenename);
+					SceneManager.LoadScene ("LoadingZero");
 				}
 			}
 
