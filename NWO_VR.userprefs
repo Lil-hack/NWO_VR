@@ -1,7 +1,8 @@
 ﻿<Properties StartupItem="Assembly-CSharp.csproj">
   <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" PreferredExecutionTarget="Unity.Instance.Unity Editor" />
-  <MonoDevelop.Ide.Workbench ActiveDocument="Assets/MyWork/GameScripts/BlackCamera.cs">
+  <MonoDevelop.Ide.Workbench ActiveDocument="Assets/MyWork/GameScripts/LoadingMangerScene.cs">
     <Files>
+      <File FileName="Assets/MyWork/GameScripts/LoadingMangerScene.cs" Line="45" Column="44" />
       <File FileName="Assets/MyWork/MENU_SCRIPTS/Record.cs" Line="1" Column="1" />
       <File FileName="Assets/MyWork/MENU_SCRIPTS/DeleteAcc.cs" Line="1" Column="1" />
       <File FileName="Assets/MyWork/MENU_SCRIPTS/OptionValueCam.cs" Line="1" Column="1" />
@@ -15,7 +16,7 @@
       <File FileName="Assets/MyWork/PlayerInfo.cs" Line="1" Column="1" />
       <File FileName="Assets/MyWork/StartBoss.cs" Line="1" Column="1" />
       <File FileName="Assets/MyWork/MENU_SCRIPTS/Registr.cs" Line="1" Column="1" />
-      <File FileName="Assets/MyWork/CharacterManager.cs" Line="90" Column="10" />
+      <File FileName="Assets/MyWork/CharacterManager.cs" Line="1" Column="1" />
       <File FileName="Assets/ShipGameStarterKit/Scripts/Game/Water.cs" Line="1" Column="1" />
       <File FileName="Assets/ShipGameStarterKit/Scripts/Game/RepositionWater.cs" Line="1" Column="1" />
       <File FileName="Assets/MyWork/MENU_SCRIPTS/Login.cs" Line="1" Column="1" />
@@ -25,8 +26,8 @@
       <File FileName="Assets/MyWork/MENU_SCRIPTS/GetStats.cs" Line="1" Column="1" />
       <File FileName="Assets/MyWork/MENU_SCRIPTS/LoadingEnable.cs" Line="1" Column="1" />
       <File FileName="Assets/MyWork/FindRoomButton.cs" Line="1" Column="1" />
-      <File FileName="Assets/MyWork/ManagerStartRoom.cs" Line="14" Column="2" />
-      <File FileName="Assets/MyWork/VIgnetteCameraME.cs" Line="9" Column="105" />
+      <File FileName="Assets/MyWork/ManagerStartRoom.cs" Line="1" Column="1" />
+      <File FileName="Assets/MyWork/VIgnetteCameraME.cs" Line="1" Column="1" />
       <File FileName="Assets/Standard Assets/Effects/ImageEffects/Scripts/VignetteAndChromaticAberration.cs" Line="1" Column="1" />
       <File FileName="Assets/MyWork/WebCam.cs" Line="1" Column="1" />
       <File FileName="Assets/OneMinuteGui/Scripts/MenuManager.cs" Line="1" Column="1" />
@@ -35,10 +36,10 @@
       <File FileName="Assets/MyWork/MENU_SCRIPTS/SlideHero.cs" Line="1" Column="1" />
       <File FileName="Assets/MyWork/OpenPortal.cs" Line="1" Column="1" />
       <File FileName="Assets/MyWork/GameScripts/Dialog.cs" Line="1" Column="1" />
-      <File FileName="Assets/MyWork/GameScripts 1/WalkSoloHero.cs" Line="10" Column="29" />
-      <File FileName="Assets/MyWork/ManagerWalkRoom.cs" Line="428" Column="6" />
-      <File FileName="Assets/MyWork/ManagerGunRoom.cs" Line="16" Column="2" />
-      <File FileName="Assets/MyWork/GameScripts/BlackCamera.cs" Line="10" Column="28" />
+      <File FileName="Assets/MyWork/GameScripts 1/WalkSoloHero.cs" Line="1" Column="1" />
+      <File FileName="Assets/MyWork/ManagerWalkRoom.cs" Line="1" Column="1" />
+      <File FileName="Assets/MyWork/ManagerGunRoom.cs" Line="1" Column="1" />
+      <File FileName="Assets/MyWork/GameScripts/BlackCamera.cs" Line="1" Column="1" />
     </Files>
   </MonoDevelop.Ide.Workbench>
   <MonoDevelop.Ide.DebuggingService.Breakpoints>

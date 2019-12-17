@@ -7,7 +7,7 @@ public class BlackCamera : MonoBehaviour {
 	// Use this for initialization
 	public void Black()
 	{
-		colorCur.saturation = 0f;
+		colorCur.saturation = 0f; s
 		
 	}
 }

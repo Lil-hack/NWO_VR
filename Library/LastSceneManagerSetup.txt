@@ -1,4 +1,4 @@
 sceneSetups:
-- path: Assets/MyWork/SnecesMY/ShipZero.unity
+- path: Assets/MyWork/SnecesMY/InGame/LoadingZero.unity
   isLoaded: 1
   isActive: 1
