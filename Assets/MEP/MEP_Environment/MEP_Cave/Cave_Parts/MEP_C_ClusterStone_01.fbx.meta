@@ -3,7 +3,12 @@ guid: 55330d2ee6b4b8343ac8c0fc93b6f731
 ModelImporter:
   serializedVersion: 19
   fileIDToRecycleName:
+    100000: //RootNode
+    400000: //RootNode
+    2300000: //RootNode
+    3300000: //RootNode
     4300000: MEP_C_ClusterStone_01
+    11100000: //RootNode
   materials:
     importMaterials: 1
     materialName: 0

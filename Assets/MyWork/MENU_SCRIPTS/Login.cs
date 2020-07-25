@@ -6,7 +6,7 @@ using UnityEngine.UI;
 
 public class Login : MonoBehaviour {
 	public MenuManager menu;
-	public string URL_API_USERS="https://api-user-game.herokuapp.com//users/";
+	public string URL_API_USERS="https://api-user-game.herokuapp.com/users/";
 	public InputField name;
 	public InputField password;
 	public GameObject loading;
@@ -37,9 +37,11 @@ public class Login : MonoBehaviour {
 		}
 	}
 	private IEnumerator Upload() {
-		string url = URL_API_USERS + string.Format ("login/username={0}&password={1}/", name.text, password.text);
-		Debug.Log(url);
-		UnityWebRequest www = UnityWebRequest.Get(url);
+		
+		WWWForm form = new WWWForm();
+		form.AddField("username", name.text);
+		form.AddField("password", password.text);
+		UnityWebRequest www = UnityWebRequest.Post(URL_API_USERS+"login/",form);
 			yield return www.Send();
 
 		if (www.isError) {

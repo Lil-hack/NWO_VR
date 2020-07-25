@@ -7,6 +7,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "NWO_VR", "Assembly-CSharp.c
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "NWO_VR", "Assembly-CSharp-Editor.csproj", "{1364EDDE-49FF-1E00-A7E0-D5023B46C956}"
 EndProject
+Project("{0FFCCD99-39E1-37E4-B891-49D9AA4872BF}") = "NWO_VR", "Assembly-UnityScript.unityproj", "{7D65D37F-2E1B-8184-0118-FAFEC3B6D0B0}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -25,6 +27,10 @@ Global
 		{1364EDDE-49FF-1E00-A7E0-D5023B46C956}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{1364EDDE-49FF-1E00-A7E0-D5023B46C956}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{1364EDDE-49FF-1E00-A7E0-D5023B46C956}.Release|Any CPU.Build.0 = Release|Any CPU
+		{7D65D37F-2E1B-8184-0118-FAFEC3B6D0B0}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{7D65D37F-2E1B-8184-0118-FAFEC3B6D0B0}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{7D65D37F-2E1B-8184-0118-FAFEC3B6D0B0}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{7D65D37F-2E1B-8184-0118-FAFEC3B6D0B0}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

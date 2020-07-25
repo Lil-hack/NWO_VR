@@ -5,7 +5,7 @@ using UnityEngine;
 public class BotZoneCollision : MonoBehaviour {
 
 	public GameObject ZoneStartSpawn;
-	
+	public GameObject destinationSpawn;
 	void OnTriggerExit (Collider other)
 	{
 
@@ -14,10 +14,11 @@ public class BotZoneCollision : MonoBehaviour {
 		
 
 			var rezone = ZoneStartSpawn.transform.localScale;
-			this.gameObject.transform.position = ZoneStartSpawn.transform.position+new Vector3(Random.Range(-rezone.z/2, rezone.z/2), 
-				Random.Range(-rezone.y/2, rezone.y/2)
-				, Random.Range(-rezone.x/2, rezone.x/2));
-			
+			// this.gameObject.transform.position = ZoneStartSpawn.transform.position+new Vector3(Random.Range(-rezone.z/2, rezone.z/2), 
+			// 	Random.Range(-rezone.y/2, rezone.y/2)
+			// 	, Random.Range(-rezone.x/2, rezone.x/2));
+
+			this.gameObject.transform.position=destinationSpawn.transform.position;
 		}
 	}
 }

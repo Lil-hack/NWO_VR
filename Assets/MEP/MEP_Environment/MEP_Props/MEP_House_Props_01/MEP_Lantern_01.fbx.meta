@@ -3,6 +3,10 @@ guid: 47f81e89fce109349a7bfe0e9c121bb1
 ModelImporter:
   serializedVersion: 19
   fileIDToRecycleName:
+    100000: //RootNode
+    400000: //RootNode
+    2300000: //RootNode
+    3300000: //RootNode
     4300000: MEP_Lantern_01
     4300002: Cube
     4300004: Plane
@@ -11,6 +15,7 @@ ModelImporter:
     4300010: MEP_Cloth_01
     4300012: MEP_Cloth_02
     4300014: MEP_Lantern_01_Rope
+    11100000: //RootNode
   materials:
     importMaterials: 1
     materialName: 0

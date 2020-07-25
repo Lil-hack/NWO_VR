@@ -22,6 +22,8 @@ public class WebCam : MonoBehaviour
 	public float accdelta = 0.5f;
 
 	public bool footmetka=false;
+	public AudioClip [] FootSteps;
+	public AudioSource audioSource;
 
 
 	void Start()
@@ -49,6 +51,7 @@ public class WebCam : MonoBehaviour
 
 	void Update()
 	{
+
 		if (cam_texture == null)
 			return;
 		if(	metkaMove == true)
@@ -61,7 +64,7 @@ public class WebCam : MonoBehaviour
 	{metkaMove = false;
 
 		yield return new WaitForSeconds(0.2f);
-
+		
 		metkaMove = true;
 		textureData1 = cam_texture.GetPixel (640, 360);
 		textureData2 = cam_texture.GetPixel (940, 360);
@@ -75,7 +78,7 @@ public class WebCam : MonoBehaviour
 			&& (compareColor (textureData3, Color.black) == true) &&
 			(compareColor (textureData4, Color.black) == true) && (compareColor (textureData5, Color.black) == true)) {
 			footmetka = true;
-
+			audioSource.PlayOneShot(FootSteps[Random.Range(0,3)]);
 			//Vector3 forward = vrHead.TransformDirection (Vector3.forward);
 			//controller.SimpleMove (forward * speed);
 

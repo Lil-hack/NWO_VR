@@ -3,8 +3,19 @@ guid: 95b88904edae1444c880e548afcc583e
 ModelImporter:
   serializedVersion: 19
   fileIDToRecycleName:
+    100000: //RootNode
+    100002: MEP_Chest
+    100004: MEP_Chest_Cap
+    400000: //RootNode
+    400002: MEP_Chest
+    400004: MEP_Chest_Cap
+    2300000: MEP_Chest
+    2300002: MEP_Chest_Cap
+    3300000: MEP_Chest
+    3300002: MEP_Chest_Cap
     4300000: MEP_Chest_Cap
     4300002: MEP_Chest
+    11100000: //RootNode
   materials:
     importMaterials: 1
     materialName: 0

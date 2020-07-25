@@ -47,6 +47,7 @@ public class MenuManager : MonoBehaviour
 	}
 	 void Start()
 	{
+		PlayerPrefs.SetString ("uuid", "");
 		if (PlayerPrefs.GetString ("uuid").CompareTo ("")==0) {
 			m_navigationHistory = new List<GameObject>{m_initialScreen};
 			heroIntro.SetActive (true);
@@ -103,7 +104,7 @@ public class MenuManager : MonoBehaviour
 	public void StartGame(string scenename)
 
 	{	
-		if (PlayerPrefs.GetInt ("exp") == 0) {
+		if (PlayerPrefs.GetInt ("exp") == 1) {
 			getStats.GetDataForStart ("ShipZero");
 		} else {
 			getStats.GetDataForStart (scenename);

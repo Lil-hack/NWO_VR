@@ -3,7 +3,12 @@ guid: 6bd5a85d1807822489d0b619fb55a1e8
 ModelImporter:
   serializedVersion: 19
   fileIDToRecycleName:
+    100000: //RootNode
+    400000: //RootNode
+    2300000: //RootNode
+    3300000: //RootNode
     4300000: MEP_C_Boulder_02
+    11100000: //RootNode
   materials:
     importMaterials: 1
     materialName: 0

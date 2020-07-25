@@ -3,7 +3,12 @@ guid: de1b80ca0b2dab34b84e16d6ad635c60
 ModelImporter:
   serializedVersion: 19
   fileIDToRecycleName:
+    100000: //RootNode
+    400000: //RootNode
+    2300000: //RootNode
+    3300000: //RootNode
     4300000: MEP_Bottle_02
+    11100000: //RootNode
   materials:
     importMaterials: 1
     materialName: 0
